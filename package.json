@@ -1,27 +1,22 @@
 {
-  "name": "gatsby-tailwind-styled-components-starter",
-  "description": "A Gatsby Starter With Tailwind CSS + Emotion Js",
-  "version": "1.0.0",
-  "author": "Muhammad Muhajir <muhajirframe@gmail.com>",
+  "name": "hanter-md",
+  "description": "hanter-md",
+  "version": "0.1.0",
+  "author": "Dragoș Străinu <str.dr4605@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.8.0",
-    "gatsby": "^2.0.0",
-    "gatsby-plugin-manifest": "^2.0.2",
-    "gatsby-plugin-offline": "^2.0.5",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-styled-components": "^3.0.3",
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby": "^2.19.10",
+    "gatsby-plugin-manifest": "^2.2.40",
+    "gatsby-plugin-offline": "^3.0.33",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-styled-components": "^3.1.18",
     "gatsby-plugin-tailwindcss": "^1.0.3",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0",
-    "styled-components": "^4.1.1",
-    "tailwindcss": "^0.6.6"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.0.0",
+    "tailwindcss": "^1.1.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -29,13 +24,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.14.2"
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-tailwind-emotion-starter"
+    "url": "https://github.com/strdr4605/hanter.md"
   }
 }
