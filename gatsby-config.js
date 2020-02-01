@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Hanter.md',
   },
+  pathPrefix: "/hanter.md",
   plugins: [
     'gatsby-plugin-tailwindcss',
     'gatsby-plugin-styled-components',
