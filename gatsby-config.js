@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-tailwind-styled-components-starter',
-        short_name: 'starter',
+        name: 'Hanter.md',
+        short_name: 'Hanter.md',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
