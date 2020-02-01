@@ -1,14 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
-
 import { Header } from '../Header'
+import { Footer } from '../Footer'
 import './layout.css'
-
-const Content = styled.div`
-  ${tw`px-32 py-8 font-sans`};
-`
+import * as s from './Layout.styled'
 
 export const Layout = ({ children }) => (
   <StaticQuery
@@ -22,7 +18,7 @@ export const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <s.Flex>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -33,8 +29,9 @@ export const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Content>{children}</Content>
-      </>
+        <s.Content>{children}</s.Content>
+        <Footer siteTitle={data.site.siteMetadata.title} />
+      </s.Flex>
     )}
   />
 )

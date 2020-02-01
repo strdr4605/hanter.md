@@ -1,7 +1,7 @@
 import React from 'react'
 import * as commonS from '../styled'
 
-export const Header = ({ siteTitle }) => (
+export const Footer = ({ siteTitle }) => (
   <commonS.HeaderContainer>
     <commonS.HeaderStyledLink to="/">
       <commonS.HeaderTitle>{siteTitle}</commonS.HeaderTitle>
