@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { Layout } from '../components'
+import { Layout, Category } from '../components'
 import JSONData from '../../content/My-JSON-Content.json'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby + Tailwind CSS + Styled Components site</p>
-    <p>Now go build something great.</p>
+    <Category />
+
     <h1>{JSONData.title}</h1>
     <ul>
       {JSONData.content.map(data => {

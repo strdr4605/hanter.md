@@ -5,5 +5,5 @@ export const Flex = styled.div`
 `
 
 export const Content = styled.div`
-  ${tw`flex-grow px-32 py-8 font-sans`};
+  ${tw`flex-grow sm:px-10 xl:px-32 py-8 font-sans`};
 `
