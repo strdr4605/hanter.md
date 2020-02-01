@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import JSONData from "../../content/My-JSON-Content.json"
+import { Layout } from '../components'
+import JSONData from '../../content/My-JSON-Content.json'
 
 const IndexPage = () => (
   <Layout>
@@ -11,7 +11,7 @@ const IndexPage = () => (
     <p>Now go build something great.</p>
     <h1>{JSONData.title}</h1>
     <ul>
-      {JSONData.content.map((data) => {
+      {JSONData.content.map(data => {
         return <li key={`content_item_${data.item}`}>{data.item}</li>
       })}
     </ul>

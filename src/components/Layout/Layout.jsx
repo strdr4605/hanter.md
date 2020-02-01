@@ -3,14 +3,14 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
+import { Header } from '../Header'
 import './layout.css'
 
 const Content = styled.div`
   ${tw`px-32 py-8 font-sans`};
 `
 
-const Layout = ({ children }) => (
+export const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -38,5 +38,3 @@ const Layout = ({ children }) => (
     )}
   />
 )
-
-export default Layout

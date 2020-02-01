@@ -10,6 +10,8 @@
   },
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/prop-types": [0]
+    "react/prop-types": [0],
+    "import/prefer-default-export": [0],
+    "import/no-default-export": [1]
   }
 }
