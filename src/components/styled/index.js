@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-  ${tw`flex-grow-0 bg-grey-lightest px-32 py-8`};
+  ${tw`container flex-grow-0 bg-grey-lightest`};
 `
 export const HeaderTitle = styled.h1`
   ${tw`text-grey-darkest m-0`};

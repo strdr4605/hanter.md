@@ -895,12 +895,13 @@ module.exports = {
   |
   */
 
-  plugins: [
-    require('tailwindcss/lib/plugins/container')({
-      // center: true,
-      // padding: '1rem',
-    }),
-  ],
+  theme: {
+    container: {
+      padding: '2rem',
+    },
+  },
+
+  plugins: [],
 
   /*
   |-----------------------------------------------------------------------------
