@@ -4,5 +4,8 @@ import * as s from './ItemCard.styled'
 
 
 export const ItemCard = () => (
-  <s.ItemContainer>ddd</s.ItemContainer>
+  <s.ItemContainer>
+    <s.ItemImg src="https://via.placeholder.com/300x400"/>
+    <s.ItemInfo>Some info</s.ItemInfo>
+  </s.ItemContainer>
 )
