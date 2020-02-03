@@ -2,18 +2,13 @@ import React from 'react'
 import * as s from './Category.styled'
 import { ItemCard } from '../ItemCard'
 
-export const Category = () => (
+export const Category = ({ categoryName, items }) => (
   <s.CategoryContainer>
-    <s.CategoryName>Category Name</s.CategoryName>
-  <s.ItemCardsContainer>
-    <ItemCard />
-    <ItemCard />
-    <ItemCard />
-    <ItemCard />
-    <ItemCard />
-    <ItemCard />
-    <ItemCard />
-    <ItemCard />
-  </s.ItemCardsContainer>
+    <s.CategoryName>{categoryName}</s.CategoryName>
+    <s.ItemCardsContainer>
+      {items.map(item => (
+        <ItemCard key={item.id} item={item} />
+      ))}
+    </s.ItemCardsContainer>
   </s.CategoryContainer>
 )
