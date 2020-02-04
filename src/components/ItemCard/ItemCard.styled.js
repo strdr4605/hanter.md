@@ -4,10 +4,11 @@ export const ItemContainer = styled.div`
   ${tw`
     flex
     flex-col
-    w-full
+    w-84
+    h-120
     m-2
     sm:w-56
-    h-80
+    sm:h-80
     bg-grey-lightest
     border-2
     border-solid
@@ -18,8 +19,8 @@ export const ItemContainer = styled.div`
 `
 
 export const ItemInfo = styled.div`
-  ${tw`h-24 w-full`};
+  ${tw`h-full w-full`};
 `
 export const ItemImg = styled.img`
-  ${tw`w-full m-0`};
+  ${tw`m-0 h-4/5`};
 `
