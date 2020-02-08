@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Hanter.md',
+    description: 'Some description about the products',
+    phoneNumber: '079089999'
   },
   pathPrefix: "/hanter.md",
   plugins: [
