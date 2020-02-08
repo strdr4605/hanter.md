@@ -13,6 +13,8 @@ export const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            description
+            phoneNumber
           }
         }
       }
@@ -28,7 +30,11 @@ export const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          phoneNumber={data.site.siteMetadata.phoneNumber}
+          description={data.site.siteMetadata.description}
+        />
         <s.Content>{children}</s.Content>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </s.Flex>

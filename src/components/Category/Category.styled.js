@@ -5,7 +5,7 @@ export const ItemCardsContainer = styled.div`
 `
 
 export const CategoryContainer = styled.div`
-  ${tw`flex flex-col my-2`};
+  ${tw`flex flex-col my-2 -mx-2`};
 `
 export const CategoryName = styled.div`
   ${tw`flex justify-center`};
