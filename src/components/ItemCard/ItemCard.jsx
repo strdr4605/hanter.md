@@ -1,8 +1,15 @@
 import React from 'react'
 import * as s from './ItemCard.styled'
 
-export const ItemCard = ({ item }) => (
-  <s.ItemContainer>
+/**
+ *
+ * @param {{
+ *  item: import('../../types').Item,
+ *  openModal: () => void,
+ * }} props
+ */
+export const ItemCard = ({ item, openModal }) => (
+  <s.ItemContainer onClick={openModal}>
     <s.ItemImg src={item.imgSrc} />
     <s.ItemInfo>{item.info}</s.ItemInfo>
   </s.ItemContainer>
