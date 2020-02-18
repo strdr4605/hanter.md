@@ -2,6 +2,18 @@ import React from 'react'
 import { FaRegWindowClose } from 'react-icons/fa'
 import * as s from './RightModal.styled'
 
+const ModalItemTitle = ({ title }) => (
+  <s.ModalItemTitleContainer>
+    <s.ModalItemTitle>{title}</s.ModalItemTitle>
+  </s.ModalItemTitleContainer>
+)
+
+const CloseModal = ({ onClick }) => (
+  <s.CloseModal onClick={onClick} type="button">
+    <FaRegWindowClose />
+  </s.CloseModal>
+)
+
 /**
  *
  * @param {{
@@ -25,18 +37,14 @@ export const RightModal = ({ isModalOpen, closeModal }) => {
 
   return (
     <s.StickyContainer>
-    <s.ModalOverlay onClick={onOverlayClick}>
-      <s.ModalContent onClick={onContentClick}>
-        <s.ModalTop>
-          <s.ModalItemTitleContainer>
-            <s.ModalItemTitle>Modal text!</s.ModalItemTitle>
-          </s.ModalItemTitleContainer>
-          <s.CloseModal onClick={closeModal} type="button">
-            <FaRegWindowClose />
-          </s.CloseModal>
-        </s.ModalTop>
-      </s.ModalContent>
-    </s.ModalOverlay>
+      <s.ModalOverlay onClick={onOverlayClick}>
+        <s.ModalContent onClick={onContentClick}>
+          <s.ModalTop>
+            <ModalItemTitle title="Item title" />
+            <CloseModal onClick={closeModal}/>
+          </s.ModalTop>
+        </s.ModalContent>
+      </s.ModalOverlay>
     </s.StickyContainer>
   )
 }
