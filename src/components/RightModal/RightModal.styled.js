@@ -1,11 +1,23 @@
 import styled from 'styled-components'
 
-export const ModalOverlay = styled.div`
+/**
+ * @todo Fix styling on Footer enter
+ */
+export const StickyContainer = styled.div`
   ${tw`absolute`};
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+`
+
+export const ModalOverlay = styled.div`
+  ${tw`sticky`};
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.25);
 `
 

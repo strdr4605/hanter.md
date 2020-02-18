@@ -24,6 +24,7 @@ export const RightModal = ({ isModalOpen, closeModal }) => {
   }
 
   return (
+    <s.StickyContainer>
     <s.ModalOverlay onClick={onOverlayClick}>
       <s.ModalContent onClick={onContentClick}>
         <s.ModalTop>
@@ -36,5 +37,6 @@ export const RightModal = ({ isModalOpen, closeModal }) => {
         </s.ModalTop>
       </s.ModalContent>
     </s.ModalOverlay>
+    </s.StickyContainer>
   )
 }
