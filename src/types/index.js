@@ -2,7 +2,8 @@
  * @typedef {Object} Item
  * @property {string} id
  * @property {string} imgSrc
- * @property {string} info
+ * @property {string} title
+ * @property {string} description
  */
 
 export const dummyExport = 'dummyExport'

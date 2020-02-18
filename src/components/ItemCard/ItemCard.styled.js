@@ -18,9 +18,16 @@ export const ItemContainer = styled.div`
   `};
 `
 
-export const ItemInfo = styled.div`
-  ${tw`h-full w-full`};
+export const ItemDescription = styled.div`
+  ${tw`h-full overflow-hidden`};
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `
+
+export const ItemTitle = styled.div`
+  ${tw`flex justify-center p-1`};
+`
+
 export const ItemImg = styled.img`
   ${tw`m-0 h-4/5`};
 `

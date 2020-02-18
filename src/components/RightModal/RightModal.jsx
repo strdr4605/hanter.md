@@ -17,12 +17,12 @@ const CloseModal = ({ onClick }) => (
 /**
  *
  * @param {{
- *  isModalOpen: boolean,
+ *  selectedItem: import('../../types').Item,
  *  closeModal: () => void,
  * }} props
  */
-export const RightModal = ({ isModalOpen, closeModal }) => {
-  if (!isModalOpen) {
+export const RightModal = ({ selectedItem, closeModal }) => {
+  if (!selectedItem) {
     return null
   }
 
@@ -40,9 +40,13 @@ export const RightModal = ({ isModalOpen, closeModal }) => {
       <s.ModalOverlay onClick={onOverlayClick}>
         <s.ModalContent onClick={onContentClick}>
           <s.ModalTop>
-            <ModalItemTitle title="Item title" />
-            <CloseModal onClick={closeModal}/>
+            <ModalItemTitle title={selectedItem.title} />
+            <CloseModal onClick={closeModal} />
           </s.ModalTop>
+          <s.ItemImgContainer>
+            <s.ItemImg src={selectedItem.imgSrc} />
+          </s.ItemImgContainer>
+          <s.ItemDescription>{selectedItem.description}</s.ItemDescription>
         </s.ModalContent>
       </s.ModalOverlay>
     </s.StickyContainer>

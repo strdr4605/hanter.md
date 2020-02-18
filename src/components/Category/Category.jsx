@@ -7,15 +7,15 @@ import { ItemCard } from '../ItemCard'
  * @param {{
   *  categoryName: string,
   *  items: import('../../types').Item[],
-  *  openModal: () => void,
+  *  selectItem: () => void,
   * }} props
   */
-export const Category = ({ categoryName, items, openModal }) => (
+export const Category = ({ categoryName, items, selectItem }) => (
   <s.CategoryContainer>
     <s.CategoryName>{categoryName}</s.CategoryName>
     <s.ItemCardsContainer>
       {items.map(item => (
-        <ItemCard key={item.id} item={item} openModal={openModal} />
+        <ItemCard key={item.id} item={item} selectItem={selectItem} />
       ))}
     </s.ItemCardsContainer>
   </s.CategoryContainer>
