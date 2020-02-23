@@ -35,7 +35,9 @@ export const Layout = ({ children }) => (
           phoneNumber={data.site.siteMetadata.phoneNumber}
           description={data.site.siteMetadata.description}
         />
-        <s.Content>{children}</s.Content>
+        <s.ContentContainer>
+          <s.Content>{children}</s.Content>
+        </s.ContentContainer>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </s.Flex>
     )}
