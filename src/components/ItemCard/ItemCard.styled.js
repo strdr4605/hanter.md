@@ -19,9 +19,7 @@ export const ItemContainer = styled.div`
 `
 
 export const ItemDescription = styled.div`
-  ${tw`h-full overflow-hidden`};
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  ${tw`h-full overflow-hidden mb-1  px-2`};
 `
 
 export const ItemTitle = styled.div`

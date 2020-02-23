@@ -7,7 +7,30 @@
           "id": "cat1-item1",
           "imgSrc": "test.jpg",
           "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
+          "list": {
+            "name": "List",
+            "elements": [
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1",
+              "Item title1"
+            ]
+          },
+          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex.Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat1-item2",
