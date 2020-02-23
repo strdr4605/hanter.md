@@ -4,130 +4,65 @@
       "name": "Covorașe auto 5D cusute",
       "items": [
         {
-<<<<<<< HEAD
-          "id": "cat1-item1",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "list": {
-            "name": "List",
-            "elements": [
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1",
-              "Item title1"
-            ]
-          },
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex.Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-        },
-        {
-          "id": "cat1-item2",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-        },
-        {
-          "id": "cat1-item3",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-        },
-        {
-          "id": "cat1-item4",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-        },
-        {
-          "id": "cat1-item5",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-        },
-        {
-          "id": "cat1-item6",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-        },
-        {
-          "id": "cat1-item7",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-=======
           "id": "10be25e7-51e7-4437-8e9b-92fcbf8e6f86",
-          "imgSrc": "https://via.placeholder.com/1000x400",
+          "imgSrc": "black-black/black-black-with-coil-all.png",
           "title": "Black/Black",
+          "list": {
+            "name": "Modele disponibile",
+            "elements": ["Hyundai Tucson", "Hyundai SantaFe", "Skoda Kodiaq", "Skoda Octavia", "Skoda Superb", "Mercedes E class", "Mercedes GLE", "BMW 5 Series", "BMW X5", "KIA Sportage", "Toyota RAV4"]
+          },
           "description": "Set Covorașe auto 5D cusute. Culoarea pielii neagră, a aței neagră,  acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil. "
         },
         {
           "id": "0b4356d0-bc7f-4acc-809f-6e8770ee9bb0",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "coffee-beige/coffee-beige-with-coil-all.png",
           "title": "Coffe/Beige",
+          "list": {
+            "name": "Modele disponibile",
+            "elements": ["Hyundai Tucson", "Hyundai SantaFe", "Skoda Kodiaq", "Mercedes E class", "Mercedes GLE", "BMW 5 Series"]
+          },
           "description": "Set Covorașe auto 5D cusute. Culoarea pielii cafenie, a aței bej,  acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil."
         },
         {
           "id": "2a68d6d4-f838-411e-a70b-e1d4a0eee3cf",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "black-beige/black-beige-with-coil.jpg",
           "title": "Black/Beige",
+          "list": {
+            "name": "Modele disponibile",
+            "elements": ["Hyundai Tucson", "Hyundai SantaFe", "Skoda Superb", "Mercedes E class", "Mercedes GLE", "BMW 5 Series", "BMW X5", "KIA Sportage", "Toyota RAV4"]
+          },
           "description": "Set Covorașe auto 5D cusute. Culoarea pielii neagră, a aței bej,  acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil."
->>>>>>> change json content, add guid
         }
       ]
     },
     {
-      "name": "Covorașe auto 5D presate",
+      "name": "Covorașe 5D presate",
       "items": [
         {
-<<<<<<< HEAD
-          "id": "cat2-item1",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-        },
-        {
-          "id": "cat2-item2",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-        },
-        {
-          "id": "cat2-item3",
-          "imgSrc": "test.jpg",
-          "title": "Item title",
-          "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
-=======
           "id": "c38b31fd-898f-4549-aefe-4ec560b9dbe9",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "universal/universale.png",
           "title": "Presate universale ",
           "description": "Set Covorașe auto universale presate. Față lungime 70cm lățime 50cm, spate lungime 50cm lățime 45cm."
         },
         {
           "id": "0dec5b25-c257-45ae-a2c2-a0073037d311",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "press-black/press-black-all.jpg",
           "title": "Black",
+          "list": {
+            "name": "Modele disponibile",
+            "elements": ["Skoda Octavia", "Skoda Rapid", "Suzuki Vitara", "Renault Kadjar", "Suzuki SX4 S-Cross", "KIA Rio Sedan", "Hyundai Creta"]
+          },
           "description": "Set Covorașe auto presate 5D. Culoarea neagră, acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil."
         },
         {
           "id": "d2146058-9e65-4bd5-be95-fed5d7681382",
-          "imgSrc": "https://via.placeholder.com/300x400",
-          "title": "Coffe",
+          "imgSrc": "press-coffee/press-coffee-all.jpg",
+          "title": "Coffee",
+          "list": {
+            "name": "Modele disponibile",
+            "elements": ["Suzuki Vitara"]
+          },
           "description": "Set Covorașe auto presate 5D. Culoarea cafenie, acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil."
->>>>>>> change json content, add guid
         }
       ]
     }

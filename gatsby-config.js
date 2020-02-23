@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Hanter.md',
-    description: 'Some description about the products',
+    description: 'Accesorii pentru mașini',
     phoneNumber: '079089999'
   },
   pathPrefix: "/hanter.md",
