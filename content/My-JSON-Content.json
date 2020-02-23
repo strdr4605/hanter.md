@@ -1,9 +1,10 @@
 {
   "categories": [
     {
-      "name": "Category 1",
+      "name": "Covorașe auto 5D cusute",
       "items": [
         {
+<<<<<<< HEAD
           "id": "cat1-item1",
           "imgSrc": "test.jpg",
           "title": "Item title",
@@ -67,13 +68,32 @@
           "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
+=======
+          "id": "10be25e7-51e7-4437-8e9b-92fcbf8e6f86",
+          "imgSrc": "https://via.placeholder.com/1000x400",
+          "title": "Black/Black",
+          "description": "Set Covorașe auto 5D cusute. Culoarea pielii neagră, a aței neagră,  acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil. "
+        },
+        {
+          "id": "0b4356d0-bc7f-4acc-809f-6e8770ee9bb0",
+          "imgSrc": "https://via.placeholder.com/300x400",
+          "title": "Coffe/Beige",
+          "description": "Set Covorașe auto 5D cusute. Culoarea pielii cafenie, a aței bej,  acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil."
+        },
+        {
+          "id": "2a68d6d4-f838-411e-a70b-e1d4a0eee3cf",
+          "imgSrc": "https://via.placeholder.com/300x400",
+          "title": "Black/Beige",
+          "description": "Set Covorașe auto 5D cusute. Culoarea pielii neagră, a aței bej,  acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil."
+>>>>>>> change json content, add guid
         }
       ]
     },
     {
-      "name": "Category 2",
+      "name": "Covorașe auto 5D presate",
       "items": [
         {
+<<<<<<< HEAD
           "id": "cat2-item1",
           "imgSrc": "test.jpg",
           "title": "Item title",
@@ -90,6 +110,24 @@
           "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
+=======
+          "id": "c38b31fd-898f-4549-aefe-4ec560b9dbe9",
+          "imgSrc": "https://via.placeholder.com/300x400",
+          "title": "Presate universale ",
+          "description": "Set Covorașe auto universale presate. Față lungime 70cm lățime 50cm, spate lungime 50cm lățime 45cm."
+        },
+        {
+          "id": "0dec5b25-c257-45ae-a2c2-a0073037d311",
+          "imgSrc": "https://via.placeholder.com/300x400",
+          "title": "Black",
+          "description": "Set Covorașe auto presate 5D. Culoarea neagră, acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil."
+        },
+        {
+          "id": "d2146058-9e65-4bd5-be95-fed5d7681382",
+          "imgSrc": "https://via.placeholder.com/300x400",
+          "title": "Coffe",
+          "description": "Set Covorașe auto presate 5D. Culoarea cafenie, acoperă peste 98% din suprafața josului. Rezistent la zgârieturi, impermeabil."
+>>>>>>> change json content, add guid
         }
       ]
     }
