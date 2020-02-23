@@ -22,7 +22,7 @@ export const ModalOverlay = styled.div`
 `
 
 export const ModalContent = styled.div`
-  ${tw`flex flex-col p-4 bg-grey-lighter absolute h-full w-11/12 sm:max-w-sm`};
+  ${tw`flex flex-col p-4 bg-grey-lighter absolute h-full w-11/12 sm:max-w-sm overflow-scroll`};
   right: 0;
   animation-duration: 0.3s;
   animation-name: slidein;
@@ -55,7 +55,7 @@ export const CloseModal = styled.button`
 `
 
 export const ItemDescription = styled.div`
-  ${tw`h-full w-full`};
+  ${tw`w-full my-3`};
 `
 
 export const ItemImgContainer = styled.div`
@@ -64,4 +64,12 @@ export const ItemImgContainer = styled.div`
 
 export const ItemImg = styled.img`
   ${tw`m-auto max-w-full`};
+`
+
+export const ModalItemListName = styled.h4``
+
+export const ModalItemList = styled.ul``
+
+export const ModalItemListElement = styled.li`
+  ${tw`m-0`};
 `
