@@ -5,43 +5,43 @@
       "items": [
         {
           "id": "cat1-item1",
-          "imgSrc": "https://via.placeholder.com/1000x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat1-item2",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat1-item3",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat1-item4",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat1-item5",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat1-item6",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat1-item7",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         }
@@ -52,19 +52,19 @@
       "items": [
         {
           "id": "cat2-item1",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat2-item2",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         },
         {
           "id": "cat2-item3",
-          "imgSrc": "https://via.placeholder.com/300x400",
+          "imgSrc": "test.jpg",
           "title": "Item title",
           "description": "Etiam fermentum, lacus ac euismod gravida, orci ante mattis purus, ultrices scelerisque dui lectus et ex."
         }

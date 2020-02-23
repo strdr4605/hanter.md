@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react'
 import * as s from './ItemCard.styled'
+import { getImage } from '../../utils'
 
 /**
  *
@@ -12,7 +13,7 @@ export const ItemCard = ({ item, selectItem }) => {
   const onClick = useCallback(() => selectItem(item), [item, selectItem])
   return (
   <s.ItemContainer onClick={onClick}>
-    <s.ItemImg src={item.imgSrc} />
+    <s.ItemImg src={getImage(item.imgSrc)} />
     <s.ItemTitle>{item.title}</s.ItemTitle>
     <s.ItemDescription>{item.description}</s.ItemDescription>
   </s.ItemContainer>
