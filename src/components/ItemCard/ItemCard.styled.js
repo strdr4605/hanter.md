@@ -5,7 +5,7 @@ export const ItemContainer = styled.div`
     flex
     flex-col
     w-84
-    h-120
+    h-108
     m-2
     sm:w-56
     sm:h-80
@@ -18,14 +18,23 @@ export const ItemContainer = styled.div`
   `};
 `
 
+export const ItemInfo = styled.div`
+  ${tw`flex overflow-hidden flex-col`};
+`
+
 export const ItemDescription = styled.div`
-  ${tw`h-full overflow-hidden mb-1  px-2`};
+  ${tw`mb-1 px-2 leading-tight text-sm`};
 `
 
 export const ItemTitle = styled.div`
-  ${tw`flex justify-center p-1`};
+  ${tw`self-center font-bold p-1`};
 `
 
 export const ItemImg = styled.img`
-  ${tw`m-0 h-4/5`};
+  ${tw`m-0 h-full w-full`};
+  object-fit: cover;
+`
+
+export const ItemImgContainer = styled.div`
+  ${tw`h-80 md:h-48`};
 `

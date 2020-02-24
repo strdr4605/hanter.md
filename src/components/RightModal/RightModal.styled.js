@@ -59,11 +59,13 @@ export const ItemDescription = styled.div`
 `
 
 export const ItemImgContainer = styled.div`
-  ${tw`w-full`};
+  ${tw``};
+  height: 50vh;
 `
 
 export const ItemImg = styled.img`
-  ${tw`m-auto max-w-full`};
+  ${tw`m-auto h-full w-full`};
+  object-fit: cover;
 `
 
 export const ModalItemListName = styled.h4``
