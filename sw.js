@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-83a5751234c917615da8.js"
+    "url": "webpack-runtime-3735d3eed147b22d3482.js"
   },
   {
-    "url": "commons-13502cd102876bd8807a.js"
+    "url": "commons-b0e2683efc9a2c20d466.js"
   },
   {
-    "url": "app-dbfbf5991691e224459a.js"
+    "url": "app-2794108b6c01a05d49d2.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-cf2fd0f92da7499f18b1.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "fef8ba6129ba2ece53a52942ce02ecce"
+    "revision": "35d554fe0b8ba92d9ab934f0e8796cf2"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -141,7 +141,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/hanter.md/app-dbfbf5991691e224459a.js`))) {
+  if (!resources || !(await caches.match(`/hanter.md/app-2794108b6c01a05d49d2.js`))) {
     return await fetch(event.request)
   }
 
