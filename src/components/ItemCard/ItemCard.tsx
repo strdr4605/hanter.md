@@ -1,15 +1,13 @@
 import React, { useCallback } from 'react'
 import * as s from './ItemCard.styled'
 import { getImage } from '../../utils'
+import { Item } from '../../types'
 
-/**
- *
- * @param {{
- *  item: import('../../types').Item,
- *  selectItem: () => void,
- * }} props
- */
-export const ItemCard = ({ item, selectItem }) => {
+interface Props {
+  item: Item
+  selectItem: (item: Item) => void
+}
+export const ItemCard: React.FC<Props> = ({ item, selectItem }) => {
   const onClick = useCallback(() => selectItem(item), [item, selectItem])
   return (
     <s.ItemContainer onClick={onClick}>

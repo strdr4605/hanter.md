@@ -3,16 +3,18 @@ import React, { useState, useCallback } from 'react'
 
 import { Layout, Category, RightModal } from '../components'
 import JSONData from '../../content/My-JSON-Content.json'
+import { Item, ContentObj } from '../types'
 
+const contentObj: ContentObj = JSONData;
 const IndexPage = () => {
-  const [selectedItem, setSelectedItem] = useState(null)
+  const [selectedItem, setSelectedItem] = useState<Item | null>(null)
 
-  const selectItem = useCallback((item) => setSelectedItem(item), [])
+  const selectItem = useCallback((item: Item) => setSelectedItem(item), [])
   const removeSelectedItem = useCallback(() => setSelectedItem(null), [])
 
   return (
     <Layout>
-      {JSONData.categories.map(category => (
+      {contentObj.categories.map(category => (
         <Category
           key={category.name}
           categoryName={category.name}

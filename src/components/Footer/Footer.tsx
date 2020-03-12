@@ -1,7 +1,11 @@
 import React from 'react'
 import * as commonS from '../styled'
 
-export const Footer = ({ siteTitle }) => (
+interface Props {
+  siteTitle: String
+}
+
+export const Footer: React.FC<Props> = ({ siteTitle }) => (
   <commonS.HeaderContainer>
     <commonS.MainContainer>
       <commonS.HeaderStyledLink to="/">

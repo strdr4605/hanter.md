@@ -2,38 +2,37 @@ import React from 'react'
 import { FaRegWindowClose } from 'react-icons/fa'
 import * as s from './RightModal.styled'
 import { getImage } from '../../utils'
+import { List } from '../../types'
 
-const ModalItemTitle = ({ title }) => (
+const ModalItemTitle: React.FC<{ title: string }> = ({ title }) => (
   <s.ModalItemTitleContainer>
     <s.ModalItemTitle>{title}</s.ModalItemTitle>
   </s.ModalItemTitleContainer>
 )
 
-const CloseModal = ({ onClick }) => (
+const CloseModal: React.FC<{ onClick(): void }> = ({ onClick }) => (
   <s.CloseModal onClick={onClick} type="button">
     <FaRegWindowClose />
   </s.CloseModal>
 )
 
-const ModalItemList = ({ list }) => (
+const ModalItemList: React.FC<{ list: List }> = ({ list }) => (
   <>
     <s.ModalItemListName>{list.name}</s.ModalItemListName>
     <s.ModalItemList>
-      {list.elements.map((el, i) => (
+      {list.elements.map((el: string, i: number) => (
         <s.ModalItemListElement key={i}>{el}</s.ModalItemListElement>
       ))}
     </s.ModalItemList>
   </>
 )
 
-/**
- *
- * @param {{
- *  selectedItem: import('../../types').Item,
- *  closeModal: () => void,
- * }} props
- */
-export const RightModal = ({ selectedItem, closeModal }) => {
+interface Props {
+  selectedItem: import('../../types').Item
+  closeModal: () => void
+}
+
+export const RightModal: React.FC<Props> = ({ selectedItem, closeModal }) => {
   if (!selectedItem) {
     return null
   }
