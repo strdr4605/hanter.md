@@ -50,10 +50,12 @@ export const RightModal: React.FC<Props> = ({ selectedItem, closeModal }) => {
     <s.StickyContainer>
       <s.ModalOverlay onClick={onOverlayClick}>
         <s.ModalContent onClick={onContentClick}>
-          <s.ModalTop>
-            <ModalItemTitle title={selectedItem.title} />
-            <CloseModal onClick={closeModal} />
-          </s.ModalTop>
+          <s.ModalTopContainer>
+            <s.ModalTop>
+              <ModalItemTitle title={selectedItem.title} />
+              <CloseModal onClick={closeModal} />
+            </s.ModalTop>
+          </s.ModalTopContainer>
           <s.ItemImgContainer>
             <s.ItemImg src={getImage(selectedItem.imgSrc)} />
           </s.ItemImgContainer>

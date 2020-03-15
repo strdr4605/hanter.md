@@ -38,6 +38,9 @@ export const ModalContent = styled.div`
   }
 `
 
+export const ModalTopContainer = styled.div`
+  ${tw``};
+`
 export const ModalTop = styled.div`
   ${tw`flex items-center`};
 `
