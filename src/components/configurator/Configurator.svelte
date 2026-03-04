@@ -1,6 +1,7 @@
 <script lang="ts">
   import { calculatePrice } from './PriceEngine';
   import type { CarsData, PricingData, ConfigState, TrunkTierId, ProtectiveMatsMode } from './types';
+  import ContactForm from './ContactForm.svelte';
 
   type Props = {
     cars: string;
@@ -17,6 +18,8 @@
       protectiveWith: string; protectiveWithout: string; protectiveOnly: string;
       totalPrice: string; currency: string;
       selectMake: string; selectModel: string; selectYear: string;
+      formTitle: string; formName: string; formPhone: string; formEmail: string;
+      formSubmit: string; formSuccess: string; formError: string; formConfigSummary: string;
     };
   };
 
@@ -266,3 +269,19 @@
   </div>
 
 </div>
+
+<ContactForm
+  {config}
+  {breakdown}
+  labels={{
+    title: labels.formTitle,
+    name: labels.formName,
+    phone: labels.formPhone,
+    email: labels.formEmail,
+    submit: labels.formSubmit,
+    success: labels.formSuccess,
+    error: labels.formError,
+    configSummary: labels.formConfigSummary,
+    currency: labels.currency,
+  }}
+/>
