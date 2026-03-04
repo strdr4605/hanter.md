@@ -12,21 +12,21 @@ const locales = [
 ];
 ---
 
-<header class="border-b border-gray-200 bg-white">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-    <a href={getRelativeLocaleUrl(locale, '/')}>
-      <img src={`${import.meta.env.BASE_URL}/logo.jpg`} alt="Hanter.md" class="h-10 w-auto" />
+<header class="border-b border-gray-200 bg-white sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
+    <a href={getRelativeLocaleUrl(locale, '/')} class="shrink-0">
+      <img src={`${import.meta.env.BASE_URL}/logo.jpg`} alt="Hanter.md" class="h-9 w-auto rounded" />
     </a>
 
-    <div class="flex items-center gap-6">
-      <a href="#configurator" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+    <div class="flex items-center gap-3 sm:gap-6 min-w-0">
+      <a href="#configurator" class="text-sm text-gray-600 hover:text-gray-900 transition-colors hidden sm:block">
         {t('nav.configurator')}
       </a>
-      <a href="#contact" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+      <a href="#contact" class="text-sm text-gray-600 hover:text-gray-900 transition-colors hidden sm:block">
         {t('nav.contact')}
       </a>
 
-      <div class="flex items-center gap-0.5">
+      <div class="flex items-center gap-0.5 shrink-0">
         {locales.map(({ code, label }) => (
           <a
             href={getRelativeLocaleUrl(code, '/')}
