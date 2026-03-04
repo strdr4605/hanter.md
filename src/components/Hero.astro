@@ -1,0 +1,73 @@
+---
+import { useTranslations } from '../i18n/index';
+import Configurator from './configurator/Configurator.svelte';
+import carsData from '../content/cars.json';
+import pricingData from '../content/pricing.json';
+
+const { locale = 'ro' } = Astro.props;
+const t = useTranslations(locale);
+
+const labels = {
+  step1: t('configurator.step1'),
+  step2: t('configurator.step2'),
+  step3: t('configurator.step3'),
+  make: t('configurator.make'),
+  model: t('configurator.model'),
+  year: t('configurator.year'),
+  seats: t('configurator.seats'),
+  seats5: t('configurator.seats5'),
+  seats7: t('configurator.seats7'),
+  material: t('configurator.material'),
+  variant: t('configurator.variant'),
+  carpetCoverage: t('configurator.carpetCoverage'),
+  sillCoverage: t('configurator.sillCoverage'),
+  trunk: t('configurator.trunk'),
+  trunkNone: t('configurator.trunkNone'),
+  trunkFloor: t('configurator.trunkFloor'),
+  trunkFloorBackrest: t('configurator.trunkFloorBackrest'),
+  trunkFloorBackrestSide: t('configurator.trunkFloorBackrestSide'),
+  protectiveWith: t('configurator.protectiveWith'),
+  protectiveWithout: t('configurator.protectiveWithout'),
+  protectiveOnly: t('configurator.protectiveOnly'),
+  totalPrice: t('configurator.totalPrice'),
+  currency: t('configurator.currency'),
+  selectMake: t('configurator.selectMake'),
+  selectModel: t('configurator.selectModel'),
+  selectYear: t('configurator.selectYear'),
+};
+---
+
+<section id="configurator" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
+
+    <!-- Left: heading + configurator -->
+    <div>
+      <h1 class="text-3xl font-bold text-gray-900 mb-1">{t('hero.title')}</h1>
+      <p class="text-gray-500 mb-6">{t('hero.subtitle')}</p>
+
+      <Configurator
+        client:only="svelte"
+        cars={JSON.stringify(carsData)}
+        pricing={JSON.stringify(pricingData)}
+        {locale}
+        {labels}
+      />
+    </div>
+
+    <!-- Right: product image (hidden on mobile, CTA shown instead) -->
+    <div class="hidden lg:block sticky top-20">
+      <img
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+        alt="Covorașe auto premium"
+        class="w-full rounded-lg object-cover aspect-[4/3]"
+      />
+      <p class="mt-3 text-xs text-gray-400 text-center">Covorașe confecționate la comandă</p>
+    </div>
+
+    <!-- Mobile CTA -->
+    <div class="lg:hidden mt-4 text-center">
+      <a href="#configurator" class="text-sm text-gray-500 underline">{t('hero.cta')} ↓</a>
+    </div>
+
+  </div>
+</section>

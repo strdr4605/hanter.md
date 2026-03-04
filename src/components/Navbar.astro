@@ -1,0 +1,45 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { useTranslations } from '../i18n/index';
+
+const { locale = 'ro' } = Astro.props;
+const t = useTranslations(locale);
+
+const locales = [
+  { code: 'ro', label: 'RO' },
+  { code: 'ru', label: 'RU' },
+  { code: 'en', label: 'EN' },
+];
+---
+
+<header class="border-b border-gray-200 bg-white">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+    <a href={getRelativeLocaleUrl(locale, '/')} class="text-base font-semibold text-gray-900">
+      Hanter.md
+    </a>
+
+    <div class="flex items-center gap-6">
+      <a href="#configurator" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+        {t('nav.configurator')}
+      </a>
+      <a href="#contact" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+        {t('nav.contact')}
+      </a>
+
+      <div class="flex items-center gap-0.5">
+        {locales.map(({ code, label }) => (
+          <a
+            href={getRelativeLocaleUrl(code, '/')}
+            class={`px-2 py-1 text-xs font-medium rounded transition-colors ${
+              locale === code
+                ? 'bg-gray-900 text-white'
+                : 'text-gray-500 hover:text-gray-900'
+            }`}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
+</header>

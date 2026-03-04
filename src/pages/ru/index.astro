@@ -1,0 +1,23 @@
+---
+import '../../styles/global.css';
+import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
+import Footer from '../../components/Footer.astro';
+
+const locale = 'ru';
+---
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hanter.md — Премиум автоковрики</title>
+    <meta name="description" content="Автоковрики по точным размерам вашего автомобиля." />
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <Navbar {locale} />
+    <main class="pt-14">
+      <Hero {locale} />
+    </main>
+    <Footer {locale} />
+  </body>
+</html>

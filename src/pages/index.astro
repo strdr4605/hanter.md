@@ -1,13 +1,23 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+
+const locale = 'ro';
 ---
 <html lang="ro">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Hanter.md — Covorașe auto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hanter.md — Covorașe auto premium</title>
+    <meta name="description" content="Covorașe auto confecționate după măsurile exacte ale mașinii tale." />
   </head>
-  <body>
-    <h1>Hanter.md</h1>
+  <body class="bg-white text-gray-900 antialiased">
+    <Navbar {locale} />
+    <main class="pt-14">
+      <Hero {locale} />
+    </main>
+    <Footer {locale} />
   </body>
 </html>
