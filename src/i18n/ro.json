@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "configurator": "Configurator",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Covorașe auto premium",
+    "subtitle": "Confecționate după măsurile exacte ale mașinii tale",
+    "cta": "Configurează acum"
+  },
+  "configurator": {
+    "title": "Configurează covorașele tale",
+    "step1": "Selectează mașina",
+    "step2": "Opțiuni covorașe",
+    "step3": "Covorașe de protecție",
+    "make": "Marcă",
+    "model": "Model",
+    "year": "An de fabricație",
+    "seats": "Număr locuri",
+    "seats5": "5 locuri",
+    "seats7": "7 locuri",
+    "material": "Material",
+    "variant": "Culoare / Design",
+    "carpetCoverage": "Acoperire mochetă",
+    "sillCoverage": "Acoperire praguri",
+    "trunk": "Portbagaj",
+    "trunkNone": "Fără portbagaj",
+    "trunkFloor": "Podea",
+    "trunkFloorBackrest": "Podea + spătar",
+    "trunkFloorBackrestSide": "Podea + spătar + laterale",
+    "protectiveWith": "Cu covorașe de protecție (incluse)",
+    "protectiveWithout": "Fără covorașe de protecție",
+    "protectiveOnly": "Doar covorașe de protecție",
+    "totalPrice": "Preț total",
+    "currency": "MDL",
+    "selectMake": "Selectează marca",
+    "selectModel": "Selectează modelul",
+    "selectYear": "Selectează anul"
+  },
+  "form": {
+    "title": "Trimite configurația",
+    "name": "Nume",
+    "phone": "Telefon",
+    "email": "Email",
+    "submit": "Trimite",
+    "success": "Mesaj trimis cu succes!",
+    "error": "Eroare. Încearcă din nou.",
+    "configSummary": "Configurație selectată"
+  },
+  "footer": {
+    "rights": "Toate drepturile rezervate"
+  }
+}

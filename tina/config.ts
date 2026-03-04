@@ -21,6 +21,7 @@ export default defineConfig({
         label: 'Cars',
         path: 'src/content',
         format: 'json',
+        match: { include: 'cars' },
         ui: {
           allowedActions: { create: false, delete: false },
           filename: { readonly: true, slugify: () => 'cars' },
@@ -64,6 +65,7 @@ export default defineConfig({
         label: 'Pricing',
         path: 'src/content',
         format: 'json',
+        match: { include: 'pricing' },
         ui: {
           allowedActions: { create: false, delete: false },
           filename: { readonly: true, slugify: () => 'pricing' },

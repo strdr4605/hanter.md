@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "configurator": "Configurator",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Premium car mats",
+    "subtitle": "Custom made to the exact dimensions of your car",
+    "cta": "Configure now"
+  },
+  "configurator": {
+    "title": "Configure your mats",
+    "step1": "Select your car",
+    "step2": "Mat options",
+    "step3": "Protective mats",
+    "make": "Make",
+    "model": "Model",
+    "year": "Year",
+    "seats": "Seats",
+    "seats5": "5 seats",
+    "seats7": "7 seats",
+    "material": "Material",
+    "variant": "Color / Design",
+    "carpetCoverage": "Carpet coverage",
+    "sillCoverage": "Sill coverage",
+    "trunk": "Trunk",
+    "trunkNone": "No trunk",
+    "trunkFloor": "Floor",
+    "trunkFloorBackrest": "Floor + backrest",
+    "trunkFloorBackrestSide": "Floor + backrest + sides",
+    "protectiveWith": "With protective mats (included)",
+    "protectiveWithout": "Without protective mats",
+    "protectiveOnly": "Protective mats only",
+    "totalPrice": "Total price",
+    "currency": "MDL",
+    "selectMake": "Select make",
+    "selectModel": "Select model",
+    "selectYear": "Select year"
+  },
+  "form": {
+    "title": "Send configuration",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "submit": "Send",
+    "success": "Message sent successfully!",
+    "error": "Error. Please try again.",
+    "configSummary": "Selected configuration"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}
