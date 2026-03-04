@@ -1,17 +1,20 @@
 <script lang="ts">
-  import type { ConfigState } from './types';
+  import type { ConfigState, PricingData } from './types';
 
   type Props = {
     config: ConfigState;
+    pricing: PricingData;
     breakdown: { total: number };
     labels: {
       title: string; name: string; phone: string; email: string;
       submit: string; success: string; error: string; configSummary: string;
       currency: string;
+      trunkNone: string; trunkFloor: string; trunkFloorBackrest: string; trunkFloorBackrestSide: string;
+      protectiveWith: string; protectiveWithout: string; protectiveOnly: string;
     };
   };
 
-  let { config, breakdown, labels }: Props = $props();
+  let { config, pricing, breakdown, labels }: Props = $props();
 
   let name = $state('');
   let phone = $state('');
@@ -23,13 +26,28 @@
   function submit(e: SubmitEvent) {
     e.preventDefault();
 
+    const material = pricing.materials.find((m) => m.id === config.materialId);
+    const variant = material?.variants.find((v) => v.id === config.variantId);
+
+    const trunkLabels: Record<string, string> = {
+      none: labels.trunkNone,
+      floor: labels.trunkFloor,
+      floor_backrest: labels.trunkFloorBackrest,
+      floor_backrest_side: labels.trunkFloorBackrestSide,
+    };
+    const protectiveLabels: Record<string, string> = {
+      WITH_PROTECTIVE: labels.protectiveWith,
+      WITHOUT_PROTECTIVE: labels.protectiveWithout,
+      ONLY_PROTECTIVE: labels.protectiveOnly,
+    };
+
     const summary = [
       `Mașină: ${config.make} ${config.model} ${config.year ?? ''} (${config.seats} locuri)`,
-      `Material: ${config.materialId} / ${config.variantId}`,
+      `Material: ${material?.label ?? config.materialId} / ${variant?.label ?? config.variantId}`,
       `Mochetă: ${config.carpetCoverage ? 'Da' : 'Nu'}`,
       `Praguri: ${config.sillCoverage ? 'Da' : 'Nu'}`,
-      `Portbagaj: ${config.trunkTierId}`,
-      `Protecție: ${config.protectiveMatsMode}`,
+      `Portbagaj: ${trunkLabels[config.trunkTierId] ?? config.trunkTierId}`,
+      `Protecție: ${protectiveLabels[config.protectiveMatsMode] ?? config.protectiveMatsMode}`,
       `Total: ${breakdown.total} ${labels.currency}`,
     ].join('\n');
 

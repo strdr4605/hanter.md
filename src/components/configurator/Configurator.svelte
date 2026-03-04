@@ -272,6 +272,7 @@
 
 <ContactForm
   {config}
+  pricing={pricingData}
   {breakdown}
   labels={{
     title: labels.formTitle,
@@ -283,5 +284,12 @@
     error: labels.formError,
     configSummary: labels.formConfigSummary,
     currency: labels.currency,
+    trunkNone: labels.trunkNone,
+    trunkFloor: labels.trunkFloor,
+    trunkFloorBackrest: labels.trunkFloorBackrest,
+    trunkFloorBackrestSide: labels.trunkFloorBackrestSide,
+    protectiveWith: labels.protectiveWith,
+    protectiveWithout: labels.protectiveWithout,
+    protectiveOnly: labels.protectiveOnly,
   }}
 />
