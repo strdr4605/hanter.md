@@ -92,7 +92,8 @@
       />
       <button
         type="submit"
-        class="w-full bg-gray-900 text-white text-sm font-medium py-2.5 rounded hover:bg-gray-700 transition-colors"
+        disabled={!config.make || !config.model || !config.year}
+        class="w-full bg-gray-900 text-white text-sm font-medium py-2.5 rounded hover:bg-gray-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
         {labels.submit}
       </button>
