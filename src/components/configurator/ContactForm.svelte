@@ -16,16 +16,15 @@
   let name = $state('');
   let phone = $state('');
   let email = $state('');
-  let status = $state<'idle' | 'sending' | 'success' | 'error'>('idle');
+  let status = $state<'idle' | 'success'>('idle');
 
-  const FORM_ID = 'xpwzrgkd'; // replace with real Formspree form ID
+  const RECIPIENT = 'strainu.tudor@gmail.com';
 
-  async function submit(e: SubmitEvent) {
+  function submit(e: SubmitEvent) {
     e.preventDefault();
-    status = 'sending';
 
     const summary = [
-      `${config.make} ${config.model} ${config.year ?? ''} (${config.seats} locuri)`,
+      `Mașină: ${config.make} ${config.model} ${config.year ?? ''} (${config.seats} locuri)`,
       `Material: ${config.materialId} / ${config.variantId}`,
       `Mochetă: ${config.carpetCoverage ? 'Da' : 'Nu'}`,
       `Praguri: ${config.sillCoverage ? 'Da' : 'Nu'}`,
@@ -34,16 +33,15 @@
       `Total: ${breakdown.total} ${labels.currency}`,
     ].join('\n');
 
-    try {
-      const res = await fetch(`https://formspree.io/f/${FORM_ID}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ name, phone, email, [labels.configSummary]: summary }),
-      });
-      status = res.ok ? 'success' : 'error';
-    } catch {
-      status = 'error';
-    }
+    const subject = encodeURIComponent(
+      `Comandă nouă — ${config.make} ${config.model} ${config.year ?? ''} — ${breakdown.total} ${labels.currency}`
+    );
+    const body = encodeURIComponent(
+      `Nume: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\n${labels.configSummary}:\n${summary}`
+    );
+
+    window.location.href = `mailto:${RECIPIENT}?subject=${subject}&body=${body}`;
+    status = 'success';
   }
 </script>
 
@@ -74,15 +72,11 @@
         bind:value={email}
         class="w-full border border-gray-200 rounded px-3 py-2 text-sm focus:outline-none focus:border-gray-400"
       />
-      {#if status === 'error'}
-        <p class="text-xs text-red-500">{labels.error}</p>
-      {/if}
       <button
         type="submit"
-        disabled={status === 'sending'}
-        class="w-full bg-gray-900 text-white text-sm font-medium py-2.5 rounded hover:bg-gray-700 transition-colors disabled:opacity-50"
+        class="w-full bg-gray-900 text-white text-sm font-medium py-2.5 rounded hover:bg-gray-700 transition-colors"
       >
-        {status === 'sending' ? '...' : labels.submit}
+        {labels.submit}
       </button>
     </form>
   {/if}
