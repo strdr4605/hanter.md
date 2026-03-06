@@ -35,7 +35,15 @@
     "currency": "MDL",
     "selectMake": "Выберите марку",
     "selectModel": "Выберите модель",
-    "selectYear": "Выберите год"
+    "selectYear": "Выберите год",
+    "generation": "Поколение",
+    "subgeneration": "Период",
+    "option": "Конфигурация мест",
+    "selectGeneration": "Выберите поколение",
+    "selectSubgeneration": "Выберите период",
+    "selectOption": "Выберите конфигурацию",
+    "matClass": "Тип коврика",
+    "matItem": "Цвет / Профиль"
   },
   "form": {
     "title": "Отправить конфигурацию",

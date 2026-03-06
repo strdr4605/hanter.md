@@ -35,7 +35,15 @@
     "currency": "MDL",
     "selectMake": "Select make",
     "selectModel": "Select model",
-    "selectYear": "Select year"
+    "selectYear": "Select year",
+    "generation": "Generation",
+    "subgeneration": "Period",
+    "option": "Seat configuration",
+    "selectGeneration": "Select generation",
+    "selectSubgeneration": "Select period",
+    "selectOption": "Select configuration",
+    "matClass": "Mat type",
+    "matItem": "Color / Profile"
   },
   "form": {
     "title": "Send configuration",

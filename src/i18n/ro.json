@@ -35,7 +35,15 @@
     "currency": "MDL",
     "selectMake": "Selectează marca",
     "selectModel": "Selectează modelul",
-    "selectYear": "Selectează anul"
+    "selectYear": "Selectează anul",
+    "generation": "Generație",
+    "subgeneration": "Perioada",
+    "option": "Configurație locuri",
+    "selectGeneration": "Selectează generația",
+    "selectSubgeneration": "Selectează perioada",
+    "selectOption": "Selectează configurația",
+    "matClass": "Tip covoraș",
+    "matItem": "Culoare / Profil"
   },
   "form": {
     "title": "Trimite configurația",

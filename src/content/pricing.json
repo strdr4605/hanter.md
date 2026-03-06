@@ -1,51 +1,7 @@
 {
-  "materials": [
-    {
-      "id": "standard",
-      "label": "Standard",
-      "basePrice": 800,
-      "variants": [
-        { "id": "black", "label": "Negru", "priceDelta": 0 },
-        { "id": "grey", "label": "Gri", "priceDelta": 50 },
-        { "id": "beige", "label": "Bej", "priceDelta": 50 }
-      ]
-    },
-    {
-      "id": "premium",
-      "label": "Premium",
-      "basePrice": 1200,
-      "variants": [
-        { "id": "black", "label": "Negru", "priceDelta": 0 },
-        { "id": "grey", "label": "Gri", "priceDelta": 100 },
-        { "id": "beige", "label": "Bej", "priceDelta": 100 },
-        { "id": "red_stitch", "label": "Negru cu cusătură roșie", "priceDelta": 150 }
-      ]
-    },
-    {
-      "id": "luxury",
-      "label": "Luxury (piele ecologică)",
-      "basePrice": 2000,
-      "variants": [
-        { "id": "black", "label": "Negru", "priceDelta": 0 },
-        { "id": "brown", "label": "Maro", "priceDelta": 200 },
-        { "id": "beige", "label": "Bej", "priceDelta": 200 }
-      ]
-    }
-  ],
-  "options": {
-    "carpetCoverageDelta": 200,
-    "sillCoverageDelta": 150,
-    "sillCoverageFormula": 1.15,
-    "trunkTiers": [
-      { "id": "none", "label": "Fără portbagaj", "priceDelta": 0 },
-      { "id": "floor", "label": "Podea", "priceDelta": 200 },
-      { "id": "floor_backrest", "label": "Podea + spătar", "priceDelta": 350 },
-      { "id": "floor_backrest_side", "label": "Podea + spătar + laterale", "priceDelta": 500 }
-    ],
-    "protectiveMats": {
-      "withSetDelta": 0,
-      "withoutSetDelta": -100,
-      "onlyProtectivePrice": 400
-    }
+  "protectiveMats": {
+    "withDelta": 0,
+    "withoutDelta": -100,
+    "onlyProtectivePrice": 400
   }
 }
