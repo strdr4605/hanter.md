@@ -1,47 +1,36 @@
-import type { ConfigState, PriceBreakdown, PricingData } from './types';
+import type { ConfigState, PriceBreakdown, PricingData, MatClass } from './types';
 
-export function calculatePrice(config: ConfigState, pricing: PricingData): PriceBreakdown {
-  const { options } = pricing;
+function zeroPriceBreakdown(): PriceBreakdown {
+  return { baseMeters: 0, totalMeters: 0, pricePerMeter: 0, matPrice: 0, protectiveDelta: 0, total: 0 };
+}
 
-  // ONLY_PROTECTIVE mode: flat price, ignore everything else
+export function calculatePrice(
+  config: ConfigState,
+  materials: { classes: MatClass[] },
+  pricing: PricingData
+): PriceBreakdown {
   if (config.protectiveMatsMode === 'ONLY_PROTECTIVE') {
-    const price = options.protectiveMats.onlyProtectivePrice;
-    return {
-      base: price,
-      variantDelta: 0,
-      carpetDelta: 0,
-      sillDelta: 0,
-      trunkDelta: 0,
-      protectiveDelta: 0,
-      total: price,
-    };
+    const price = pricing.protectiveMats.onlyProtectivePrice;
+    return { baseMeters: 0, totalMeters: 0, pricePerMeter: 0, matPrice: price, protectiveDelta: 0, total: price };
   }
 
-  const material = pricing.materials.find((m) => m.id === config.materialId);
-  if (!material) {
-    return { base: 0, variantDelta: 0, carpetDelta: 0, sillDelta: 0, trunkDelta: 0, protectiveDelta: 0, total: 0 };
-  }
+  if (!config.selectedOption) return zeroPriceBreakdown();
 
-  const variant = material.variants.find((v) => v.id === config.variantId);
-  const variantDelta = variant?.priceDelta ?? 0;
+  const baseMeters = config.selectedOption.meters;
+  const extraMeters = config.selectedOption.suboptions
+    .filter((s) => config.activeSuboptions[s.id])
+    .reduce((sum, s) => sum + s.extraMeters, 0);
+  const totalMeters = baseMeters + extraMeters;
 
-  const base = material.basePrice;
-  const carpetDelta = config.carpetCoverage ? options.carpetCoverageDelta : 0;
+  const matClass = materials.classes.find((c) => c.id === config.matClassId);
+  const matItem = matClass?.items.find((i) => i.id === config.matItemId);
+  const pricePerMeter = matItem?.pricePerMeter ?? 0;
 
-  // Sill coverage uses a different formula: multiplier on base price
-  // sillCoverageFormula is a multiplier (e.g. 1.15 = +15% of base)
-  // TBD: exact formula to be confirmed by client
-  const sillDelta = config.sillCoverage ? Math.round(base * (options.sillCoverageFormula - 1)) : 0;
-
-  const trunkTier = options.trunkTiers.find((t) => t.id === config.trunkTierId);
-  const trunkDelta = trunkTier?.priceDelta ?? 0;
-
+  const matPrice = Math.round(totalMeters * pricePerMeter);
   const protectiveDelta =
     config.protectiveMatsMode === 'WITHOUT_PROTECTIVE'
-      ? options.protectiveMats.withoutSetDelta
-      : options.protectiveMats.withSetDelta;
+      ? pricing.protectiveMats.withoutDelta
+      : pricing.protectiveMats.withDelta;
 
-  const total = base + variantDelta + carpetDelta + sillDelta + trunkDelta + protectiveDelta;
-
-  return { base, variantDelta, carpetDelta, sillDelta, trunkDelta, protectiveDelta, total };
+  return { baseMeters, totalMeters, pricePerMeter, matPrice, protectiveDelta, total: matPrice + protectiveDelta };
 }

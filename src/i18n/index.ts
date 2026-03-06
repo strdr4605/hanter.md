@@ -1,6 +1,7 @@
 import ro from './ro.json';
 import ru from './ru.json';
 import en from './en.json';
+import type { LocaleLabel, Locale as ConfigLocale } from '../components/configurator/types';
 
 const translations = { ro, ru, en } as const;
 
@@ -31,4 +32,8 @@ export function useTranslations(locale: string) {
     }
     return typeof val === 'string' ? val : key;
   };
+}
+
+export function resolveLabel(label: LocaleLabel, locale: ConfigLocale): string {
+  return label[locale] ?? label.ro;
 }

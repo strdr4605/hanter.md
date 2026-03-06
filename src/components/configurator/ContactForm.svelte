@@ -1,20 +1,19 @@
 <script lang="ts">
-  import type { ConfigState, PricingData } from './types';
+  import type { ConfigState, PriceBreakdown, MatClass } from './types';
 
   type Props = {
     config: ConfigState;
-    pricing: PricingData;
-    breakdown: { total: number };
+    breakdown: PriceBreakdown;
+    materialsData: { classes: MatClass[] };
     labels: {
       title: string; name: string; phone: string; email: string;
       submit: string; success: string; error: string; configSummary: string;
       currency: string;
-      trunkNone: string; trunkFloor: string; trunkFloorBackrest: string; trunkFloorBackrestSide: string;
       protectiveWith: string; protectiveWithout: string; protectiveOnly: string;
     };
   };
 
-  let { config, pricing, breakdown, labels }: Props = $props();
+  let { config, breakdown, materialsData, labels }: Props = $props();
 
   let name = $state('');
   let phone = $state('');
@@ -26,33 +25,33 @@
   function submit(e: SubmitEvent) {
     e.preventDefault();
 
-    const material = pricing.materials.find((m) => m.id === config.materialId);
-    const variant = material?.variants.find((v) => v.id === config.variantId);
+    const matClass = materialsData.classes.find((c) => c.id === config.matClassId);
+    const matItem = matClass?.items.find((i) => i.id === config.matItemId);
 
-    const trunkLabels: Record<string, string> = {
-      none: labels.trunkNone,
-      floor: labels.trunkFloor,
-      floor_backrest: labels.trunkFloorBackrest,
-      floor_backrest_side: labels.trunkFloorBackrestSide,
-    };
     const protectiveLabels: Record<string, string> = {
       WITH_PROTECTIVE: labels.protectiveWith,
       WITHOUT_PROTECTIVE: labels.protectiveWithout,
       ONLY_PROTECTIVE: labels.protectiveOnly,
     };
 
+    const activeSuboptionLabels = config.selectedOption
+      ? config.selectedOption.suboptions
+          .filter((s) => config.activeSuboptions[s.id])
+          .map((s) => s.label)
+          .join(', ')
+      : '';
+
     const summary = [
-      `Mașină: ${config.make} ${config.model} ${config.year ?? ''} (${config.seats} locuri)`,
-      `Material: ${material?.label ?? config.materialId} / ${variant?.label ?? config.variantId}`,
-      `Mochetă: ${config.carpetCoverage ? 'Da' : 'Nu'}`,
-      `Praguri: ${config.sillCoverage ? 'Da' : 'Nu'}`,
-      `Portbagaj: ${trunkLabels[config.trunkTierId] ?? config.trunkTierId}`,
+      `Mașină: ${config.brandName} ${config.modelName} ${config.generationName} ${config.yearRange}`,
+      config.selectedOption ? `Configurație: ${config.selectedOption.label}` : '',
+      activeSuboptionLabels ? `Opțiuni: ${activeSuboptionLabels}` : '',
+      `Material: ${matClass?.label ?? config.matClassId} / ${matItem?.label ?? config.matItemId}`,
       `Protecție: ${protectiveLabels[config.protectiveMatsMode] ?? config.protectiveMatsMode}`,
       `Total: ${breakdown.total} ${labels.currency}`,
-    ].join('\n');
+    ].filter(Boolean).join('\n');
 
     const subject = encodeURIComponent(
-      `Comandă nouă — ${config.make} ${config.model} ${config.year ?? ''} — ${breakdown.total} ${labels.currency}`
+      `Comandă nouă — ${config.brandName} ${config.modelName} ${config.generationName} — ${breakdown.total} ${labels.currency}`
     );
     const body = encodeURIComponent(
       `Nume: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\n${labels.configSummary}:\n${summary}`
@@ -61,6 +60,8 @@
     window.location.href = `mailto:${RECIPIENT}?subject=${subject}&body=${body}`;
     status = 'success';
   }
+
+  const isCarSelected = $derived(!!config.selectedOption);
 </script>
 
 <div id="contact" class="bg-white border border-gray-200 rounded-lg p-6 mt-4">
@@ -92,7 +93,7 @@
       />
       <button
         type="submit"
-        disabled={!config.make || !config.model || !config.year}
+        disabled={!isCarSelected}
         class="w-full bg-gray-900 text-white text-sm font-medium py-2.5 rounded hover:bg-gray-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
         {labels.submit}
