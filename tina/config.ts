@@ -66,9 +66,16 @@ export default defineConfig({
                             list: true,
                             ui: { itemProps: (item) => ({ label: item.label_ro }) },
                             fields: [
-                              { type: 'string', name: 'label_ro', label: 'Label (RO)', required: true },
-                              { type: 'string', name: 'label_ru', label: 'Label (RU)', required: true },
-                              { type: 'string', name: 'label_en', label: 'Label (EN)', required: true },
+                              {
+                                type: 'object',
+                                name: 'label',
+                                label: 'Label',
+                                fields: [
+                                  { type: 'string', name: 'ro', label: 'RO', required: true },
+                                  { type: 'string', name: 'ru', label: 'RU', required: true },
+                                  { type: 'string', name: 'en', label: 'EN', required: true },
+                                ],
+                              },
                               { type: 'number', name: 'meters', label: 'Base meters of material', required: true },
                               {
                                 type: 'object',
@@ -78,9 +85,16 @@ export default defineConfig({
                                 ui: { itemProps: (item) => ({ label: item.id }) },
                                 fields: [
                                   { type: 'string', name: 'id', label: 'ID (e.g. carpetCoverage)', required: true },
-                                  { type: 'string', name: 'label_ro', label: 'Label (RO)', required: true },
-                                  { type: 'string', name: 'label_ru', label: 'Label (RU)', required: true },
-                                  { type: 'string', name: 'label_en', label: 'Label (EN)', required: true },
+                                  {
+                                    type: 'object',
+                                    name: 'label',
+                                    label: 'Label',
+                                    fields: [
+                                      { type: 'string', name: 'ro', label: 'RO', required: true },
+                                      { type: 'string', name: 'ru', label: 'RU', required: true },
+                                      { type: 'string', name: 'en', label: 'EN', required: true },
+                                    ],
+                                  },
                                   { type: 'number', name: 'extraMeters', label: 'Extra meters', required: true },
                                 ],
                               },
@@ -115,9 +129,16 @@ export default defineConfig({
             ui: { itemProps: (item) => ({ label: item.id }) },
             fields: [
               { type: 'string', name: 'id', label: 'ID', required: true },
-              { type: 'string', name: 'label_ro', label: 'Label (RO)', required: true },
-              { type: 'string', name: 'label_ru', label: 'Label (RU)', required: true },
-              { type: 'string', name: 'label_en', label: 'Label (EN)', required: true },
+              {
+                type: 'object',
+                name: 'label',
+                label: 'Label',
+                fields: [
+                  { type: 'string', name: 'ro', label: 'RO', required: true },
+                  { type: 'string', name: 'ru', label: 'RU', required: true },
+                  { type: 'string', name: 'en', label: 'EN', required: true },
+                ],
+              },
               {
                 type: 'object',
                 name: 'items',
@@ -126,9 +147,16 @@ export default defineConfig({
                 ui: { itemProps: (item) => ({ label: item.id }) },
                 fields: [
                   { type: 'string', name: 'id', label: 'ID', required: true },
-                  { type: 'string', name: 'label_ro', label: 'Label (RO)', required: true },
-                  { type: 'string', name: 'label_ru', label: 'Label (RU)', required: true },
-                  { type: 'string', name: 'label_en', label: 'Label (EN)', required: true },
+                  {
+                    type: 'object',
+                    name: 'label',
+                    label: 'Label',
+                    fields: [
+                      { type: 'string', name: 'ro', label: 'RO', required: true },
+                      { type: 'string', name: 'ru', label: 'RU', required: true },
+                      { type: 'string', name: 'en', label: 'EN', required: true },
+                    ],
+                  },
                   { type: 'number', name: 'pricePerMeter', label: 'Price per meter (MDL)', required: true },
                   { type: 'string', name: 'image', label: 'Swatch image URL', required: true },
                   { type: 'string', name: 'demoImage', label: 'Demo image URL', required: true },
