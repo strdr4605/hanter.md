@@ -25,10 +25,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx astro build
-        env:
-          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-          TINA_BRANCH: master
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/
