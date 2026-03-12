@@ -42,7 +42,7 @@
       : '';
 
     const summary = [
-      `Mașină: ${config.brandName} ${config.modelName} ${config.generationName} ${config.yearRange}`,
+      `Mașină: ${config.brandName} ${config.modelName}`,
       config.selectedOption ? `Configurație: ${config.selectedOption.label}` : '',
       activeSuboptionLabels ? `Opțiuni: ${activeSuboptionLabels}` : '',
       `Material: ${matClass?.label ?? config.matClassId} / ${matItem?.label ?? config.matItemId}`,
@@ -51,7 +51,7 @@
     ].filter(Boolean).join('\n');
 
     const subject = encodeURIComponent(
-      `Comandă nouă — ${config.brandName} ${config.modelName} ${config.generationName} — ${breakdown.total} ${labels.currency}`
+      `Comandă nouă — ${config.brandName} ${config.modelName} — ${breakdown.total} ${labels.currency}`
     );
     const body = encodeURIComponent(
       `Nume: ${name}\nTelefon: ${phone}\nEmail: ${email}\n\n${labels.configSummary}:\n${summary}`
