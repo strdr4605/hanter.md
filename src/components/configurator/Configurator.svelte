@@ -15,9 +15,9 @@
     locale: string;
     labels: {
       step1: string; step2: string; step3: string;
-      brand: string; model: string; subgeneration: string; option: string;
+      brand: string; model: string; option: string;
       selectBrand: string; selectModel: string;
-      selectSubgeneration: string; selectOption: string;
+      selectOption: string;
       matClass: string; matItem: string;
       protectiveWith: string; protectiveWithout: string; protectiveOnly: string;
       totalPrice: string; currency: string;
@@ -38,8 +38,6 @@
   let config = $state<ConfigState>({
     brandName: '',
     modelName: '',
-    generationName: '',
-    yearRange: '',
     selectedOption: null,
     activeSuboptions: {},
     matClassId: firstMatClass?.id ?? '',
@@ -49,22 +47,7 @@
 
   // Cascading derived state
   const selectedBrand = $derived(carsData.brands.find((b) => b.name === config.brandName));
-
-  // Flat list of "Model Generation" entries for 2nd dropdown
-  type ModelGenEntry = { label: string; modelName: string; generationName: string };
-  const modelGenOptions = $derived<ModelGenEntry[]>(
-    (selectedBrand?.models ?? []).flatMap((model) =>
-      model.generations.map((gen) => ({
-        label: `${model.name} ${gen.name}`,
-        modelName: model.name,
-        generationName: gen.name,
-      }))
-    )
-  );
-
   const selectedModel = $derived(selectedBrand?.models.find((m) => m.name === config.modelName));
-  const selectedGeneration = $derived(selectedModel?.generations.find((g) => g.name === config.generationName));
-  const selectedSubgeneration = $derived(selectedGeneration?.subgenerations.find((s) => s.yearRange === config.yearRange));
 
   const selectedMatClass = $derived(materialsData.classes.find((c) => c.id === config.matClassId));
   const selectedMatItem = $derived(selectedMatClass?.items.find((i) => i.id === config.matItemId));
@@ -80,29 +63,12 @@
   function onBrandChange(e: Event) {
     config.brandName = (e.target as HTMLSelectElement).value;
     config.modelName = '';
-    config.generationName = '';
-    config.yearRange = '';
     config.selectedOption = null;
     config.activeSuboptions = {};
   }
 
-  function onModelGenChange(e: Event) {
-    const val = (e.target as HTMLSelectElement).value;
-    if (!val) {
-      config.modelName = '';
-      config.generationName = '';
-    } else {
-      const [modelName, generationName] = val.split('|');
-      config.modelName = modelName;
-      config.generationName = generationName;
-    }
-    config.yearRange = '';
-    config.selectedOption = null;
-    config.activeSuboptions = {};
-  }
-
-  function onYearRangeChange(e: Event) {
-    config.yearRange = (e.target as HTMLSelectElement).value;
+  function onModelChange(e: Event) {
+    config.modelName = (e.target as HTMLSelectElement).value;
     config.selectedOption = null;
     config.activeSuboptions = {};
   }
@@ -117,11 +83,7 @@
     config.matItemId = item.id;
   }
 
-  const modelGenValue = $derived(
-    config.modelName && config.generationName
-      ? `${config.modelName}|${config.generationName}`
-      : ''
-  );
+
 </script>
 
 <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
@@ -160,44 +122,28 @@
         </select>
       </div>
 
-      <!-- Model + Generation (combined) -->
+      <!-- Model -->
       <div class="col-span-2 sm:col-span-1 flex flex-col gap-1">
         <label class="text-xs text-gray-500">{labels.model}</label>
         <select
-          value={modelGenValue}
-          onchange={onModelGenChange}
+          value={config.modelName}
+          onchange={onModelChange}
           disabled={!config.brandName}
           class="border border-gray-200 rounded px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:border-gray-400 disabled:opacity-40"
         >
           <option value="">{labels.selectModel}</option>
-          {#each modelGenOptions as entry}
-            <option value={`${entry.modelName}|${entry.generationName}`}>{entry.label}</option>
-          {/each}
-        </select>
-      </div>
-
-      <!-- Year range -->
-      <div class="col-span-2 sm:col-span-1 flex flex-col gap-1">
-        <label class="text-xs text-gray-500">{labels.subgeneration}</label>
-        <select
-          value={config.yearRange}
-          onchange={onYearRangeChange}
-          disabled={!config.generationName}
-          class="border border-gray-200 rounded px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:border-gray-400 disabled:opacity-40"
-        >
-          <option value="">{labels.selectSubgeneration}</option>
-          {#each selectedGeneration?.subgenerations ?? [] as subgen}
-            <option value={subgen.yearRange}>{subgen.yearRange}</option>
+          {#each selectedBrand?.models ?? [] as model}
+            <option value={model.name}>{model.name} ({model.yearRange})</option>
           {/each}
         </select>
       </div>
 
       <!-- Option (seat config) -->
-      {#if selectedSubgeneration && selectedSubgeneration.options.length > 0}
+      {#if selectedModel && selectedModel.options.length > 0}
         <div class="col-span-2 flex flex-col gap-2">
           <label class="text-xs text-gray-500">{labels.option}</label>
           <div class="flex flex-wrap gap-2">
-            {#each selectedSubgeneration.options as opt}
+            {#each selectedModel.options as opt}
               <button
                 type="button"
                 onclick={() => selectOption(opt)}

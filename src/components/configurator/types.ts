@@ -6,9 +6,7 @@ export type Locale = 'ro' | 'ru' | 'en';
 
 export type RawSuboption = { id: string; label: LocaleLabel; extraMeters: number };
 export type RawCarOption = { label: LocaleLabel; meters: number; suboptions: RawSuboption[] };
-export type RawSubgeneration = { yearRange: string; options: RawCarOption[] };
-export type RawGeneration = { name: string; subgenerations: RawSubgeneration[] };
-export type RawCarModel = { name: string; generations: RawGeneration[] };
+export type RawCarModel = { name: string; yearRange: string; options: RawCarOption[] };
 export type RawCarBrand = { name: string; models: RawCarModel[] };
 export type CarsData = { brands: RawCarBrand[] };
 
@@ -19,9 +17,7 @@ export type MaterialsData = { classes: RawMatClass[] };
 // Resolved types (locale applied) — passed into Configurator as props
 export type Suboption = { id: string; label: string; extraMeters: number };
 export type CarOption = { label: string; meters: number; suboptions: Suboption[] };
-export type Subgeneration = { yearRange: string; options: CarOption[] };
-export type Generation = { name: string; subgenerations: Subgeneration[] };
-export type CarModel = { name: string; generations: Generation[] };
+export type CarModel = { name: string; yearRange: string; options: CarOption[] };
 export type CarBrand = { name: string; models: CarModel[] };
 
 export type MatItem = { id: string; label: string; pricePerMeter: number; image: string; demoImage: string };
@@ -33,8 +29,6 @@ export type PricingData = { protectiveMats: ProtectiveMatsOptions };
 export type ConfigState = {
   brandName: string;
   modelName: string;
-  generationName: string;
-  yearRange: string;
   selectedOption: CarOption | null;
   activeSuboptions: Record<string, boolean>;
   matClassId: string;
