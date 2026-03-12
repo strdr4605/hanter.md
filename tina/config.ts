@@ -7,6 +7,7 @@ export default defineConfig({
   build: {
     outputFolder: 'admin',
     publicFolder: 'public',
+    basePath: 'hanter.md',
   },
   media: {
     tina: {
