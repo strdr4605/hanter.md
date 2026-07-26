@@ -27,9 +27,9 @@ The existing dependency grouping and caret-range convention remain unchanged. `p
 - Update action major references:
   - `actions/checkout`: v4 to v7
   - `actions/setup-node`: v4 to v7
-  - `actions/configure-pages`: v5 to v6
   - `actions/upload-pages-artifact`: v3 to v5
   - `actions/deploy-pages`: v4 to v5
+- Do not add `actions/configure-pages`; the existing workflow does not use it.
 
 ## Upgrade Method
 
@@ -50,6 +50,12 @@ Use a single-shot upgrade as requested:
 - Do not add validation packages or refactor application code unless an upgrade requires it.
 
 If npm reports a peer conflict, resolve it using versions compatible with all latest direct dependencies rather than downgrading a requested direct dependency. If a latest release cannot coexist with the project after documented migrations, stop and report the exact incompatibility before reducing scope.
+
+## Residual Security Risk
+
+After plain non-force `npm audit fix`, 25 advisories remain: 1 low, 5 moderate, and 19 high. Findings originate in latest TinaCMS CLI and admin dependency chains. Node build-tool findings do not execute in public Astro pages, but generated Tina admin assets may include browser-side packages, so deployed-runtime exposure cannot be treated as absent.
+
+npm offers complete remediation only through forced direct downgrades to `@tinacms/cli@0.60.5` or `tinacms@3.8.1`, contrary to latest-dependency scope. Retain latest versions, avoid `--force`, and report and monitor upstream TinaCMS fixes.
 
 ## Verification
 
