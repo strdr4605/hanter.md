@@ -15361,7 +15361,16 @@
         {
           "name": "E-Класс",
           "yearRange": "1992-2026",
-          "options": []
+          "options": [
+            {
+              "label": {
+                "ro": "5 locuri",
+                "ru": "5 locuri",
+                "en": "5 locuri"
+              },
+              "meters": 2.1
+            }
+          ]
         },
         {
           "name": "E-Класс AMG",
