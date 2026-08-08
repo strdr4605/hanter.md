@@ -50,12 +50,18 @@ export default defineConfig({
                     name: 'options',
                     label: 'Seat options',
                     list: true,
-                    ui: { itemProps: (item) => ({ label: item.label_ro }) },
+                    ui: {
+                      itemProps: (item) => ({
+                        label: item.label?.ro
+                          ? `${item.label.ro} · ${item.meters ?? 0} m²`
+                          : 'New seat option',
+                      }),
+                    },
                     fields: [
                       {
                         type: 'object',
                         name: 'label',
-                        label: 'Label',
+                        label: 'Label (translations)',
                         fields: [
                           { type: 'string', name: 'ro', label: 'RO', required: true },
                           { type: 'string', name: 'ru', label: 'RU', required: true },
@@ -68,13 +74,17 @@ export default defineConfig({
                         name: 'suboptions',
                         label: 'Suboptions',
                         list: true,
-                        ui: { itemProps: (item) => ({ label: item.id }) },
+                        ui: {
+                          itemProps: (item) => ({
+                            label: item.label?.ro ?? item.id ?? 'New suboption',
+                          }),
+                        },
                         fields: [
                           { type: 'string', name: 'id', label: 'ID (e.g. carpetCoverage)', required: true },
                           {
                             type: 'object',
                             name: 'label',
-                            label: 'Label',
+                            label: 'Label (translations)',
                             fields: [
                               { type: 'string', name: 'ro', label: 'RO', required: true },
                               { type: 'string', name: 'ru', label: 'RU', required: true },
@@ -114,7 +124,7 @@ export default defineConfig({
               {
                 type: 'object',
                 name: 'label',
-                label: 'Label',
+                label: 'Label (translations)',
                 fields: [
                   { type: 'string', name: 'ro', label: 'RO', required: true },
                   { type: 'string', name: 'ru', label: 'RU', required: true },
@@ -132,7 +142,7 @@ export default defineConfig({
                   {
                     type: 'object',
                     name: 'label',
-                    label: 'Label',
+                    label: 'Label (translations)',
                     fields: [
                       { type: 'string', name: 'ro', label: 'RO', required: true },
                       { type: 'string', name: 'ru', label: 'RU', required: true },
