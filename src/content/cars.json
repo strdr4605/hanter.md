@@ -15368,7 +15368,18 @@
                 "ru": "5 locuri",
                 "en": "5 locuri"
               },
-              "meters": 2.1
+              "meters": 2.1,
+              "suboptions": [
+                {
+                  "id": "carpetCoverage",
+                  "label": {
+                    "ro": "Portbagaj",
+                    "ru": "Portbagaj",
+                    "en": "Portbagaj"
+                  },
+                  "extraMeters": 1.2
+                }
+              ]
             }
           ]
         },
