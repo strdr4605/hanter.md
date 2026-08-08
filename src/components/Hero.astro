@@ -19,7 +19,7 @@ const cars: CarBrand[] = (rawCarsData.brands as RawCarBrand[]).map((brand) => ({
     options: model.options.map((opt) => ({
       label: resolveLabel(opt.label, loc),
       meters: opt.meters,
-      suboptions: opt.suboptions.map((sub) => ({
+      suboptions: (opt.suboptions ?? []).map((sub) => ({
         id: sub.id,
         label: resolveLabel(sub.label, loc),
         extraMeters: sub.extraMeters,
