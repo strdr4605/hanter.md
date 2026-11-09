@@ -1,0 +1,30 @@
+{
+ "Toyota|RAV4": [
+  {
+   "label": "XA40",
+   "set": {
+    "cu": 2.2,
+    "fara": 1.7,
+    "pres": 1.2,
+    "full": 2.5,
+    "fx": 200
+   },
+   "note": "confirmat de Hanter.md 09.11.2026; fără praguri = cu − 0,5 (estimat)"
+  }
+ ],
+ "Skoda|Kodiaq": [
+  {
+   "vm": {
+    "t": "7 locuri",
+    "add": {
+     "cu": 0.6,
+     "fara": 0.6
+    },
+    "set": {
+     "pres": 1.5
+    }
+   },
+   "note": "7 locuri: +0,6 m piele, protecție 1,5 m (Hanter.md 09.11.2026)"
+  }
+ ]
+}

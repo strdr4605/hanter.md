@@ -1,0 +1,16 @@
+---
+// Antetul paginii cu meniul de ancore
+const links = [
+  ['#beneficii', 'Beneficii'],
+  ['#solutia', 'Soluția'],
+  ['#materiale', 'Materiale'],
+  ['#cum', 'Cum comanzi'],
+  ['#configurator', 'Configurator'],
+];
+---
+<header class="top">
+  <div class="logo">Hanter<span>.md</span></div>
+  <nav class="top">
+    {links.map(([href, label]) => <a href={href}>{label}</a>)}
+  </nav>
+</header>

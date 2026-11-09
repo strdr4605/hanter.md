@@ -1,0 +1,10 @@
+---
+import landing from '../../content/test/landing.json';
+const s = landing.steps;
+---
+<section class="blk" id="cum">
+  <h2>{s.title}</h2>
+  <div class="how">
+    {s.items.map((it) => <div><b>{it.title}</b><p>{it.text}</p></div>)}
+  </div>
+</section>

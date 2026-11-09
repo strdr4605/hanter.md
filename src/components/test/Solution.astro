@@ -1,0 +1,12 @@
+---
+import landing from '../../content/test/landing.json';
+const s = landing.solution;
+---
+<section class="blk" id="solutia">
+  <h2>{s.title}</h2>
+  <p class="sub2">{s.intro}</p>
+  <div class="sol">
+    <div class="bad"><h3>{s.badTitle}</h3><ul>{s.bad.map((t) => <li>{t}</li>)}</ul></div>
+    <div class="good"><h3>{s.goodTitle}</h3><ul>{s.good.map((t) => <li>{t}</li>)}</ul></div>
+  </div>
+</section>

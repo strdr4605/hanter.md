@@ -1,0 +1,20 @@
+[
+ ["Opel|Insignia",20,"2009–2016 · Insignia A · cotieră spate fără priză jos · tipar Buick Regal",2009,2016,"BKJWJ02"],
+ ["Opel|Insignia",20,"2017–2025 · Insignia B · cotieră spate cu priză jos · tipar Buick Regal",2017,2025,"BKJWJ03"],
+ ["Opel|Insignia",30,"2009–2016 · Insignia A · cotieră spate fără priză jos · tipar Buick Regal",2009,2016,"BKJWB02"],
+ ["Opel|Insignia",30,"2017–2025 · Insignia B · cotieră spate cu priză jos · tipar Buick Regal",2017,2025,"BKJWB03"],
+ ["Opel|Insignia",21,"2009–2016 · non-hibrid · plasă de protecție în stânga · tipar Buick Regal",2009,2016,"BKJWW02"],
+ ["Opel|Insignia",21,"2017–2021 · non-hibrid · plasă de protecție în dreapta · tipar Buick Regal",2017,2021,"BKJWW03"],
+ ["Opel|Insignia",21,"2017–2024 · non-hibrid · dreapta fără plasă · stânga fără carcasă de plastic · tipar Buick Regal",2017,2024,"BKJWW05"],
+ ["Opel|Insignia",21,"2022–2023 · non-hibrid · dreapta fără plasă · stânga cu carcasă de plastic · tipar Buick Regal",2022,2023,"BKJWW06"],
+ ["Opel|Astra",20,"2010–2014 · Astra J · volan cu 3 spițe · tipar Buick Excelle XT/GT",2010,2014,"BKYLJ01"],
+ ["Opel|Astra",30,"2010–2014 · Astra J · volan cu 3 spițe · tipar Buick Excelle XT/GT",2010,2014,"BKYLB01"],
+ ["Opel|Astra",21,"2010–2014 · Astra J sedan · tipar Buick Excelle GT",2010,2014,"BKYLW01"],
+ ["Opel|Astra",21,"2010–2014 · Astra J hatchback · tipar Buick Excelle XT",2010,2014,"BKYLW02"],
+ ["Opel|Mokka",20,"2013–2019 · Mokka / Mokka X · tipar Buick Encore",2013,2019,"BKAKJ01"],
+ ["Opel|Mokka",30,"2013–2019 · Mokka / Mokka X · tipar Buick Encore",2013,2019,"BKAKB01"],
+ ["Opel|Mokka",21,"2013–2019 · Mokka / Mokka X · tipar Buick Encore",2013,2019,"BKAKAW01"],
+ ["Chevrolet|Lacetti",20,"2004–2016 · sedan · tipar Buick Excelle",2004,2016,"BKKYJ01"],
+ ["Chevrolet|Lacetti",30,"2004–2016 · sedan · tipar Buick Excelle",2004,2016,"BKKYB01"],
+ ["Chevrolet|Lacetti",21,"2008–2016 · sedan · stânga fără boxă audio · spătar din 2 părți · tipar Buick Excelle",2008,2016,"BKKYW01"]
+]

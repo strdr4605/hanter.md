@@ -1,0 +1,27 @@
+---
+// Straturile covorașului + tipurile de covoraș de protecție
+import landing from '../../content/test/landing.json';
+const m = landing.materials;
+---
+<section class="blk" id="materiale">
+  <h2>{m.title}</h2>
+  <p class="sub2">{m.intro}</p>
+  <div class="layers">
+    <div class="stack" aria-hidden="true">
+      {m.layers.map((_, i) => <div class={`ly l${Math.min(i + 1, 5)}`}><span>{i + 1}</span></div>)}
+    </div>
+    <ol class="lyl">
+      {m.layers.map((ly) => <li><b>{ly.title}</b><span>{ly.text}</span></li>)}
+    </ol>
+  </div>
+  <div class="prot-info">
+    <div class="pimg" aria-hidden="true"></div>
+    <div>
+      <h3>{m.protectionTitle}</h3>
+      <p>{m.protectionIntro}</p>
+      <ul class="pl">
+        {m.protectionTypes.map((p) => <li><b>{p.title}</b> – {p.text}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
