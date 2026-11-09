@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "tag": "Covorașe auto din piele eco · Moldova",
+    "title": "Covorașe croite exact pe mașina ta",
+    "lead": "Covorașe din piele eco făcute după tiparul modelului tău: generația, numărul de locuri și versiunea (benzină, diesel, hibrid sau electrică). Alegi materialul și vezi prețul pe loc.",
+    "ctaPrimary": "Calculează prețul",
+    "ctaSecondary": "De ce Hanter.md",
+    "leatherCombos": "16",
+    "imageCaption": "Material real: negru cu ață bej, model romb"
+  },
+  "benefits": {
+    "title": "Ce câștigi",
+    "intro": "Covorașele universale alunecă, lasă goluri și nu protejează marginile. Ale noastre sunt făcute pentru podeaua mașinii tale.",
+    "items": [
+      {
+        "title": "Se potrivesc la milimetru",
+        "text": "Croim după tiparul exact al modelului și generației, inclusiv diferențele dintre versiunile pe benzină, hibride și electrice."
+      },
+      {
+        "title": "Podeaua rămâne curată",
+        "text": "Pielea eco nu lasă apa, noroiul și zăpada să ajungă la mocheta originală. Se șterge cu o cârpă umedă."
+      },
+      {
+        "title": "Pragurile sunt protejate",
+        "text": "Varianta cu acoperire de praguri apără și marginile ușilor, unde se uzează cel mai repede."
+      },
+      {
+        "title": "Rezistă la uzură",
+        "text": "Stratul de protecție de deasupra (plastic cu fire sau mochetă premium) preia frecarea de la încălțăminte."
+      },
+      {
+        "title": "Arată ca în showroom",
+        "text": "16 combinații de culoare, cusătură și finisaj, mat sau lucios, potrivite cu interiorul mașinii tale."
+      },
+      {
+        "title": "Și portbagajul",
+        "text": "Podea, spătarul banchetei sau portbagaj complet, cu margine ridicată ca să nu se scurgă nimic."
+      }
+    ]
+  },
+  "solution": {
+    "title": "Soluția Hanter.md",
+    "intro": "Nu ghicim mărimea. Folosim baza de tipare a furnizorului nostru și consumul real de material din sutele de lucrări făcute.",
+    "badTitle": "Covorașe universale",
+    "bad": [
+      "Lasă goluri la pedale și pe lângă praguri",
+      "Alunecă sub picioare",
+      "Apa trece pe lângă margini",
+      "Același covoraș pentru zeci de mașini"
+    ],
+    "goodTitle": "Covorașe Hanter.md",
+    "good": [
+      "Tipar pentru generația și versiunea exactă a mașinii",
+      "Acoperă podeaua, tunelul și, la alegere, pragurile",
+      "Piele eco cu cusătură, plus strat de protecție",
+      "Prețul îl vezi înainte să comanzi"
+    ]
+  },
+  "materials": {
+    "title": "Din ce e făcut covorașul",
+    "intro": "Un covoraș Hanter.md are cinci straturi. Fiecare are rolul lui: arată bine, e moale sub picior, nu lasă apa să treacă și stă fix pe loc.",
+    "layers": [
+      {
+        "title": "Piele eco",
+        "text": "Stratul de deasupra, cu cusătură în romb sau pătrat. Se șterge ușor cu o cârpă umedă și arată îngrijit în orice interior."
+      },
+      {
+        "title": "Paralon (burete moale)",
+        "text": "Face covorașul moale și plăcut sub picior și dă volum cusăturii."
+      },
+      {
+        "title": "Peliculă impermeabilă",
+        "text": "Nu lasă apa, zăpada topită și noroiul să treacă spre podeaua mașinii."
+      },
+      {
+        "title": "Burete mai tare",
+        "text": "Ține forma covorașului, ca să nu se îndoaie și să nu se deformeze în timp."
+      },
+      {
+        "title": "Plasă antiderapantă",
+        "text": "Se agață de mocheta sau podeaua originală a mașinii, așa că covorașul nu alunecă sub pedale."
+      }
+    ],
+    "protectionTitle": "Covorașul de protecție",
+    "protectionIntro": "Se pune deasupra covorașului din piele eco, acolo unde calci cel mai des. Ai trei variante:",
+    "protectionTypes": [
+      {
+        "title": "Plastic cu fire tari",
+        "text": "universal pentru iarnă și vară, rezistent la uzură, se spală simplu cu apă cu presiune."
+      },
+      {
+        "title": "Plastic cu fire moi",
+        "text": "strânge foarte mult praf și gunoi între fire, universal pentru iarnă și vară, se spală ușor."
+      },
+      {
+        "title": "Mochetă premium 1,8 mm",
+        "text": "are dedesubt un strat de cauciuc care nu lasă apa să treacă."
+      }
+    ]
+  },
+  "steps": {
+    "title": "Cum comanzi",
+    "items": [
+      {
+        "title": "Alegi mașina",
+        "text": "Marca, modelul, anii și configurația din configuratorul de mai jos."
+      },
+      {
+        "title": "Alegi covorașele",
+        "text": "Salon, portbagaj, materialul și culoarea. Prețul se schimbă pe loc."
+      },
+      {
+        "title": "Trimiți comanda",
+        "text": "Un mesaj gata scris pe WhatsApp sau Viber. Confirmăm modelul și prețul."
+      },
+      {
+        "title": "Primești covorașele",
+        "text": "Le croim după tipar și ți le dăm gata de pus în mașină."
+      }
+    ]
+  },
+  "configurator": {
+    "title": "Configurator și preț",
+    "intro": "Alege mașina și covorașele. Prețul total e mereu în colțul din dreapta jos al ecranului."
+  },
+  "footer": "Hanter.md · covorașe auto din piele eco · consumul vine din vânzările 2021–2026; prețurile urmează formula Hanter.md și se confirmă la comandă."
+}

@@ -1,0 +1,51 @@
+---
+// hanter.md/test: pagina cu beneficii + configurator.
+// Texte și prețuri: TinaCMS (src/content/test/*.json). Catalog: src/data/test/ (generat de tools/catalog).
+import '../../styles/test.css';
+import cfg from '../../content/test/configurator.json';
+import cars from '../../data/test/catalog.json';
+import gens from '../../data/test/gens.json';
+import TopBar from '../../components/test/TopBar.astro';
+import Hero from '../../components/test/Hero.astro';
+import Benefits from '../../components/test/Benefits.astro';
+import Solution from '../../components/test/Solution.astro';
+import Materials from '../../components/test/Materials.astro';
+import HowTo from '../../components/test/HowTo.astro';
+import Configurator from '../../components/test/Configurator.astro';
+import FloatingPrice from '../../components/test/FloatingPrice.astro';
+import PageFooter from '../../components/test/PageFooter.astro';
+
+const n = (x: number) => x.toLocaleString('ro-MD').replace(/[\s,. ]/g, ' ');
+const models = n(cars.length);
+const patterns = n(Math.floor(cars.reduce((s, c) => s + c.s20.length + c.s30.length + c.s21.length, 0) / 500) * 500) + '+';
+// datele pentru scriptul din browser; "<" e escapat ca să nu închidă tag-ul <script>
+const pageData = JSON.stringify({ base: import.meta.env.BASE_URL, cfg, cars, gens }).replace(/</g, '\\u003c');
+---
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hanter.md · Covorașe auto din piele eco</title>
+    <meta name="description" content="Covorașe auto din piele eco croite după tiparul exact al mașinii tale. Alegi materialul și vezi prețul pe loc." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@600;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" />
+  </head>
+  <body>
+    <div class="wrap">
+      <TopBar />
+      <Hero models={models} patterns={patterns} />
+      <Benefits />
+      <Solution />
+      <Materials />
+      <HowTo />
+      <Configurator />
+      <FloatingPrice />
+      <PageFooter />
+    </div>
+    <script id="hanter-data" type="application/json" is:inline set:html={pageData}></script>
+    <script>
+      import '../../scripts/test/main.js';
+    </script>
+  </body>
+</html>

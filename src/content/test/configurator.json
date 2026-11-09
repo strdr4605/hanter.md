@@ -1,0 +1,718 @@
+{
+  "phone": "+37379089999",
+  "orderUrl": "https://script.google.com/macros/s/AKfycbwCjyhosxkZA2WDdSZyHfE2fmey9sk-wlEb57FQpqF1CM8coePHJtBjHbT1iaQqShbx/exec",
+  "roundTo": 50,
+  "noProtectionDiscount": {
+    "fiveSeats": 700,
+    "sevenSeats": 900
+  },
+  "salonFee": {
+    "withSills": [
+      1700,
+      1800,
+      1900
+    ],
+    "withoutSills": [
+      1500,
+      1600,
+      1700
+    ]
+  },
+  "finishNames": {
+    "mat": "Piele mat",
+    "lucios": "Piele lucioasă"
+  },
+  "leather": [
+    {
+      "id": "m1",
+      "finish": "mat",
+      "name": "Cărămiziu, cusătură dublă",
+      "desc": "Model paralelogram, ață bej",
+      "leatherColor": "#9b4a2c",
+      "threadColor": "#e2cfa8",
+      "pattern": "paralel",
+      "pricePerMeter": 800,
+      "image": "/images/materials/caramiziu_hex.jpg"
+    },
+    {
+      "id": "m2",
+      "finish": "mat",
+      "name": "Negru cu ață bej",
+      "desc": "Model romb",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#d9c39f",
+      "pattern": "romb",
+      "pricePerMeter": 1100,
+      "image": "/images/materials/negru_bej_romb.jpg"
+    },
+    {
+      "id": "m3",
+      "finish": "mat",
+      "name": "Negru cu ață roșie",
+      "desc": "Model romb",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#c8312c",
+      "pattern": "romb",
+      "pricePerMeter": 1100,
+      "image": "/images/materials/negru_rosu_romb.jpg"
+    },
+    {
+      "id": "m4",
+      "finish": "mat",
+      "name": "Maro cu ață bej",
+      "desc": "Model romb",
+      "leatherColor": "#5a3a26",
+      "threadColor": "#d9c39f",
+      "pattern": "romb",
+      "pricePerMeter": 1100,
+      "image": "/images/materials/maro_bej_romb.jpg"
+    },
+    {
+      "id": "m5",
+      "finish": "mat",
+      "name": "Bej cu ață bej",
+      "desc": "Model romb",
+      "leatherColor": "#c8ad86",
+      "threadColor": "#f1e4c9",
+      "pattern": "romb",
+      "pricePerMeter": 1100,
+      "image": "/images/materials/bej_bej_romb.jpg"
+    },
+    {
+      "id": "m6",
+      "finish": "mat",
+      "name": "Negru cu ață bej, cusătură dublă",
+      "desc": "Model pătrat",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#d9c39f",
+      "pattern": "patrat",
+      "pricePerMeter": 1200,
+      "image": "/images/materials/negru_bej_patrat.jpg"
+    },
+    {
+      "id": "m7",
+      "finish": "mat",
+      "name": "Maro cu ață maro, cusătură dublă",
+      "desc": "Model pătrat",
+      "leatherColor": "#5a3a26",
+      "threadColor": "#9a6a45",
+      "pattern": "patrat",
+      "pricePerMeter": 1200,
+      "image": "/images/materials/maro_maro_patrat.jpg"
+    },
+    {
+      "id": "l1",
+      "finish": "lucios",
+      "name": "Negru cu ață bej",
+      "desc": "Model romb",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#d9c39f",
+      "pattern": "romb",
+      "pricePerMeter": 1300,
+      "image": "/images/materials/negru_bej_romb.jpg"
+    },
+    {
+      "id": "l2",
+      "finish": "lucios",
+      "name": "Negru cu ață roșie",
+      "desc": "Model romb",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#c8312c",
+      "pattern": "romb",
+      "pricePerMeter": 1300,
+      "image": "/images/materials/negru_rosu_romb.jpg"
+    },
+    {
+      "id": "l3",
+      "finish": "lucios",
+      "name": "Maro cu ață bej",
+      "desc": "Model romb",
+      "leatherColor": "#5a3a26",
+      "threadColor": "#d9c39f",
+      "pattern": "romb",
+      "pricePerMeter": 1300,
+      "image": "/images/materials/maro_bej_romb.jpg"
+    },
+    {
+      "id": "l4",
+      "finish": "lucios",
+      "name": "Negru cu ață albastră",
+      "desc": "Model romb",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#2f6fd1",
+      "pattern": "romb",
+      "pricePerMeter": 1300,
+      "image": "/images/materials/negru_albastru_romb.jpg"
+    },
+    {
+      "id": "l5",
+      "finish": "lucios",
+      "name": "Negru cu ață bej, cusătură dublă",
+      "desc": "Model pătrat",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#d9c39f",
+      "pattern": "patrat",
+      "pricePerMeter": 1400,
+      "image": "/images/materials/negru_bej_patrat.jpg"
+    },
+    {
+      "id": "l6",
+      "finish": "lucios",
+      "name": "Maro cu ață maro, cusătură dublă",
+      "desc": "Model pătrat",
+      "leatherColor": "#5a3a26",
+      "threadColor": "#9a6a45",
+      "pattern": "patrat",
+      "pricePerMeter": 1400,
+      "image": "/images/materials/maro_maro_patrat.jpg"
+    },
+    {
+      "id": "l7",
+      "finish": "lucios",
+      "name": "Negru cu ață neagră, cusătură dublă",
+      "desc": "Model pătrat",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#4a4744",
+      "pattern": "patrat",
+      "pricePerMeter": 1400,
+      "image": "/images/materials/negru_negru_patrat.jpg"
+    },
+    {
+      "id": "l8",
+      "finish": "lucios",
+      "name": "Negru cu ață bronz",
+      "desc": "Model romb",
+      "leatherColor": "#1f1e1d",
+      "threadColor": "#b07a3e",
+      "pattern": "romb",
+      "pricePerMeter": 1300,
+      "image": ""
+    },
+    {
+      "id": "l9",
+      "finish": "lucios",
+      "name": "Gri cu ață gri",
+      "desc": "Model romb",
+      "leatherColor": "#9c9a96",
+      "threadColor": "#c9cacc",
+      "pattern": "romb",
+      "pricePerMeter": 1300,
+      "image": "/images/materials/gri_gri_romb.jpg"
+    }
+  ],
+  "protection": [
+    {
+      "id": "plastic",
+      "name": "Plastic cu fire",
+      "desc": "Rezistent la uzură, se spală cu apă cu presiune",
+      "pricePerMeter": 1000,
+      "colors": [
+        {
+          "name": "Negru",
+          "css": "#1c1c1c"
+        },
+        {
+          "name": "Negru cu gri",
+          "css": "linear-gradient(135deg,#1c1c1c 50%,#8c8f93 50%)"
+        },
+        {
+          "name": "Gri",
+          "css": "#8c8f93"
+        },
+        {
+          "name": "Maro",
+          "css": "#5b3b28"
+        },
+        {
+          "name": "Maro cu linii M (BMW)",
+          "css": "linear-gradient(90deg,#5b3b28 0 55%,#1c69d4 55% 70%,#0b1f4d 70% 82%,#e22718 82%)"
+        },
+        {
+          "name": "Bej",
+          "css": "#cbb48e"
+        },
+        {
+          "name": "Roșu",
+          "css": "#b3261e"
+        }
+      ]
+    },
+    {
+      "id": "moale",
+      "name": "Plastic cu fire moi",
+      "desc": "Strânge mult praf și gunoi, pentru iarnă și vară",
+      "pricePerMeter": 600,
+      "colors": [
+        {
+          "name": "Cărămiziu",
+          "css": "#9b4a2c"
+        },
+        {
+          "name": "Negru",
+          "css": "#1c1c1c"
+        },
+        {
+          "name": "Alb",
+          "css": "#efede8"
+        },
+        {
+          "name": "Maro",
+          "css": "#5b3b28"
+        }
+      ]
+    },
+    {
+      "id": "mocheta",
+      "name": "Mochetă premium 1,8 mm",
+      "desc": "Cu strat de cauciuc dedesubt, nu trece apa",
+      "pricePerMeter": 1600,
+      "colors": [
+        {
+          "name": "Negru",
+          "css": "#1c1c1c"
+        },
+        {
+          "name": "Maro închis",
+          "css": "#3e2a1f"
+        },
+        {
+          "name": "Gri",
+          "css": "#7d8084"
+        }
+      ]
+    },
+    {
+      "id": "none",
+      "name": "Fără",
+      "desc": "Doar pielea eco",
+      "pricePerMeter": 0,
+      "colors": []
+    }
+  ],
+  "salonTypes": [
+    {
+      "id": "cu",
+      "name": "Cu acoperire praguri",
+      "desc": "Protejează și pragurile ușilor"
+    },
+    {
+      "id": "fara",
+      "name": "Fără acoperire praguri",
+      "desc": "Doar podeaua"
+    },
+    {
+      "id": "none",
+      "name": "Fără salon",
+      "desc": "Doar portbagaj"
+    }
+  ],
+  "trunk": [
+    {
+      "id": "jos",
+      "name": "Jos",
+      "desc": "Podeaua portbagajului",
+      "feeMat": 200,
+      "feeGlossy": 300
+    },
+    {
+      "id": "spatar",
+      "name": "Jos cu spătar",
+      "desc": "Podea + spatele banchetei",
+      "feeMat": 500,
+      "feeGlossy": 700
+    },
+    {
+      "id": "full",
+      "name": "Full",
+      "desc": "Podea, spătar și părțile laterale",
+      "feeMat": 1700,
+      "feeGlossy": 1900
+    },
+    {
+      "id": "none",
+      "name": "Fără portbagaj",
+      "desc": "",
+      "feeMat": 0,
+      "feeGlossy": 0
+    }
+  ],
+  "trunkExtras": [
+    {
+      "id": "margine",
+      "name": "Margine ridicată",
+      "desc": "Bordură pe tot perimetrul",
+      "feeMat": 200,
+      "feeGlossy": 300
+    }
+  ],
+  "countries": [
+    {
+      "code": "MD",
+      "name": "Moldova",
+      "dial": "373",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "69 123 456"
+    },
+    {
+      "code": "RO",
+      "name": "România",
+      "dial": "40",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "721 234 567"
+    },
+    {
+      "code": "UA",
+      "name": "Ucraina",
+      "dial": "380",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "50 123 4567"
+    },
+    {
+      "code": "IT",
+      "name": "Italia",
+      "dial": "39",
+      "minDigits": 9,
+      "maxDigits": 11,
+      "example": "312 345 6789"
+    },
+    {
+      "code": "DE",
+      "name": "Germania",
+      "dial": "49",
+      "minDigits": 10,
+      "maxDigits": 11,
+      "example": "151 2345 6789"
+    },
+    {
+      "code": "FR",
+      "name": "Franța",
+      "dial": "33",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "6 12 34 56 78"
+    },
+    {
+      "code": "ES",
+      "name": "Spania",
+      "dial": "34",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "612 345 678"
+    },
+    {
+      "code": "PT",
+      "name": "Portugalia",
+      "dial": "351",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "912 345 678"
+    },
+    {
+      "code": "GB",
+      "name": "Marea Britanie",
+      "dial": "44",
+      "minDigits": 10,
+      "maxDigits": 10,
+      "example": "7400 123456"
+    },
+    {
+      "code": "IE",
+      "name": "Irlanda",
+      "dial": "353",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "85 123 4567"
+    },
+    {
+      "code": "NL",
+      "name": "Olanda",
+      "dial": "31",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "6 12345678"
+    },
+    {
+      "code": "BE",
+      "name": "Belgia",
+      "dial": "32",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "470 12 34 56"
+    },
+    {
+      "code": "LU",
+      "name": "Luxemburg",
+      "dial": "352",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "628 123 456"
+    },
+    {
+      "code": "CH",
+      "name": "Elveția",
+      "dial": "41",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "78 123 45 67"
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "dial": "43",
+      "minDigits": 10,
+      "maxDigits": 13,
+      "example": "664 123456"
+    },
+    {
+      "code": "PL",
+      "name": "Polonia",
+      "dial": "48",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "512 345 678"
+    },
+    {
+      "code": "CZ",
+      "name": "Cehia",
+      "dial": "420",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "601 123 456"
+    },
+    {
+      "code": "SK",
+      "name": "Slovacia",
+      "dial": "421",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "912 123 456"
+    },
+    {
+      "code": "HU",
+      "name": "Ungaria",
+      "dial": "36",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "20 123 4567"
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "dial": "359",
+      "minDigits": 8,
+      "maxDigits": 9,
+      "example": "87 123 4567"
+    },
+    {
+      "code": "GR",
+      "name": "Grecia",
+      "dial": "30",
+      "minDigits": 10,
+      "maxDigits": 10,
+      "example": "691 234 5678"
+    },
+    {
+      "code": "CY",
+      "name": "Cipru",
+      "dial": "357",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "96 123456"
+    },
+    {
+      "code": "MT",
+      "name": "Malta",
+      "dial": "356",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "9696 1234"
+    },
+    {
+      "code": "SE",
+      "name": "Suedia",
+      "dial": "46",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "70 123 45 67"
+    },
+    {
+      "code": "NO",
+      "name": "Norvegia",
+      "dial": "47",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "406 12 345"
+    },
+    {
+      "code": "DK",
+      "name": "Danemarca",
+      "dial": "45",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "32 12 34 56"
+    },
+    {
+      "code": "FI",
+      "name": "Finlanda",
+      "dial": "358",
+      "minDigits": 9,
+      "maxDigits": 10,
+      "example": "41 2345678"
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "dial": "372",
+      "minDigits": 7,
+      "maxDigits": 8,
+      "example": "5123 4567"
+    },
+    {
+      "code": "LV",
+      "name": "Letonia",
+      "dial": "371",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "21 234 567"
+    },
+    {
+      "code": "LT",
+      "name": "Lituania",
+      "dial": "370",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "612 34567"
+    },
+    {
+      "code": "RS",
+      "name": "Serbia",
+      "dial": "381",
+      "minDigits": 8,
+      "maxDigits": 9,
+      "example": "60 1234567"
+    },
+    {
+      "code": "HR",
+      "name": "Croația",
+      "dial": "385",
+      "minDigits": 8,
+      "maxDigits": 9,
+      "example": "91 234 5678"
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "dial": "386",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "31 234 567"
+    },
+    {
+      "code": "BA",
+      "name": "Bosnia și Herțegovina",
+      "dial": "387",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "61 123 456"
+    },
+    {
+      "code": "ME",
+      "name": "Muntenegru",
+      "dial": "382",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "67 622 901"
+    },
+    {
+      "code": "MK",
+      "name": "Macedonia de Nord",
+      "dial": "389",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "72 345 678"
+    },
+    {
+      "code": "AL",
+      "name": "Albania",
+      "dial": "355",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "67 212 3456"
+    },
+    {
+      "code": "IS",
+      "name": "Islanda",
+      "dial": "354",
+      "minDigits": 7,
+      "maxDigits": 7,
+      "example": "611 1234"
+    },
+    {
+      "code": "TR",
+      "name": "Turcia",
+      "dial": "90",
+      "minDigits": 10,
+      "maxDigits": 10,
+      "example": "501 234 56 78"
+    },
+    {
+      "code": "GE",
+      "name": "Georgia",
+      "dial": "995",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "555 12 34 56"
+    },
+    {
+      "code": "AM",
+      "name": "Armenia",
+      "dial": "374",
+      "minDigits": 8,
+      "maxDigits": 8,
+      "example": "77 123456"
+    },
+    {
+      "code": "AZ",
+      "name": "Azerbaidjan",
+      "dial": "994",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "40 123 45 67"
+    },
+    {
+      "code": "RU",
+      "name": "Rusia",
+      "dial": "7",
+      "minDigits": 10,
+      "maxDigits": 10,
+      "example": "912 345 67 89"
+    },
+    {
+      "code": "BY",
+      "name": "Belarus",
+      "dial": "375",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "29 491 1911"
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "dial": "972",
+      "minDigits": 9,
+      "maxDigits": 9,
+      "example": "50 234 5678"
+    },
+    {
+      "code": "US",
+      "name": "SUA / Canada",
+      "dial": "1",
+      "minDigits": 10,
+      "maxDigits": 10,
+      "example": "201 555 0123"
+    }
+  ]
+}

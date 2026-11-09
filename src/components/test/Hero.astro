@@ -1,0 +1,27 @@
+---
+// Prima secțiune: titlu, îndemn și cifre. Textele: src/content/test/landing.json (TinaCMS)
+import landing from '../../content/test/landing.json';
+interface Props { models: string; patterns: string }
+const { models, patterns } = Astro.props;
+const h = landing.hero;
+---
+<div class="land">
+  <div>
+    <div class="tag">{h.tag}</div>
+    <h1>{h.title}</h1>
+    <p class="lead">{h.lead}</p>
+    <div class="cta">
+      <a class="p" href="#configurator">{h.ctaPrimary}</a>
+      <a class="s" href="#beneficii">{h.ctaSecondary}</a>
+    </div>
+    <div class="facts">
+      <div><b id="fModels">{models}</b><span>modele de mașini</span></div>
+      <div><b id="fPat">{patterns}</b><span>tipare exacte</span></div>
+      <div><b>{h.leatherCombos}</b><span>combinații de piele</span></div>
+    </div>
+  </div>
+  <div class="heroart">
+    <svg id="heroMat" viewBox="0 0 360 230" role="img" aria-label="Covorașe Hanter.md"></svg>
+    <div class="cap">{h.imageCaption}</div>
+  </div>
+</div>

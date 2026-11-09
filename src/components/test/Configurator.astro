@@ -1,0 +1,113 @@
+---
+// Formularul configuratorului + bonul cu prețul. Logica e în src/scripts/test/.
+import landing from '../../content/test/landing.json';
+---
+<div class="cfgh" id="configurator">
+  <h2>{landing.configurator.title}</h2>
+  <p>{landing.configurator.intro}</p>
+</div>
+
+<div class="grid">
+  <form class="steps" id="cfg" autocomplete="off">
+    <fieldset>
+      <legend><span class="legend"><span class="num">1</span><b>Mașina ta</b></span></legend>
+      <div class="row">
+        <label class="f">Marca<select id="brand"></select></label>
+        <label class="f">Modelul<select id="model"></select></label>
+        <label class="f">Anii / generația<select id="gen"></select></label>
+        <div id="fuelWrap" class="vwrap" hidden><div class="sub">Motorizarea mașinii tale</div><p class="hint">Versiunile pe benzină, diesel și hibrid pot avea podeaua diferită. Alege ce ai tu.</p><div class="opts" id="fuel" role="radiogroup" aria-label="Motorizare"></div></div>
+      </div>
+      <div class="carinfo" id="carinfo"></div>
+      <details class="nf" id="nf">
+        <summary>Nu găsești mașina ta în listă? Scrie-ne modelul</summary>
+        <p class="hint">Scrie marca, modelul și anul. Îți răspundem pe Viber sau WhatsApp cu tiparul și prețul.</p>
+        <label class="f" style="margin-bottom:8px">Telefonul tău (ca să-ți răspundem)<input id="nfPhone" type="tel" inputmode="tel" placeholder="ex. 069 123 456" maxlength="20"></label>
+        <div class="row nfrow">
+          <label class="f">Marca și modelul<input id="nfCar" type="text" placeholder="ex. Toyota Avensis Verso" maxlength="80"></label>
+          <label class="f">Anul<input id="nfYear" type="text" inputmode="numeric" placeholder="ex. 2008" maxlength="9"></label>
+          <label class="f">Motorizare / detalii<input id="nfMore" type="text" placeholder="ex. hibrid, 7 locuri" maxlength="80"></label>
+        </div>
+        <div class="nfbtns">
+          <a class="btn" id="nfWa" href="#" target="_blank" rel="noopener">Trimite pe WhatsApp</a>
+          <button class="btn ghost" type="button" id="nfVb">Trimite pe Viber</button>
+        </div>
+        <span class="ok" id="nfOk" hidden>Mesajul e copiat. Lipește-l în chatul de Viber care s-a deschis.</span>
+      </details>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="legend"><span class="num">2</span><b>Materialul</b><small>piele eco, apoi stratul de protecție · <a href="#materiale">ce straturi are?</a></small></span></legend>
+      <div id="leather" style="display:grid;gap:14px"></div>
+      <div class="dim" id="salonMore">
+        <div class="sub" style="margin-top:18px">Strat de protecție (covorașul de deasupra)</div>
+        <div class="opts" id="prot" style="margin-top:8px"></div>
+        <div id="protColWrap" style="display:grid;gap:8px;margin-top:12px"><div class="swl">Culoare strat de protecție: <b id="pcName"></b></div><div class="sw" id="protCol"></div></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="legend"><span class="num">3</span><b>Covorașe salon</b></span></legend>
+      <div class="opts" id="salon"></div>
+      <div id="svWrap" class="vwrap"><div class="sub">Configurația mașinii tale</div><p class="hint" id="svHint"></p><div class="opts vopts" id="svc" role="radiogroup" aria-label="Configurația salonului"></div></div>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="legend"><span class="num">4</span><b>Covoraș portbagaj</b></span></legend>
+      <div class="opts" id="trunk"></div>
+      <div id="tvWrap" class="vwrap"><div class="sub">Configurația portbagajului</div><p class="hint" id="tvHint"></p><div class="opts vopts" id="tvc" role="radiogroup" aria-label="Configurația portbagajului"></div></div>
+      <div class="dim" id="trunkAdd" style="display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))"></div>
+      <p class="note">„Jos” și „Jos cu spătar” se croiesc pe loc pentru orice mașină. Varianta „Full” e disponibilă doar dacă există tiparul la furnizor. La unele modele portbagajul are o formă complexă, iar atunci confirmăm prețul la comandă.</p>
+    </fieldset>
+
+  </form>
+
+  <aside>
+    <div class="preview">
+      <svg id="mat" viewBox="0 0 360 230" role="img" aria-label="Previzualizare covoraș"></svg>
+      <div class="cap" id="matCap">Previzualizare orientativă</div>
+    </div>
+    <div class="ticket">
+      <h2 id="carTitle">—</h2>
+      <div class="lines" id="lines"></div>
+      <div class="total"><span>Total</span><b id="total">0 lei</b></div>
+      <p class="note" id="conf"></p>
+      <button class="btn" type="button" id="order">Comandă acum</button>
+      <div class="msg" id="msgBox" hidden>
+        <form class="ordf" id="ordf" novalidate>
+          <div class="sub">Datele tale</div>
+          <div class="f">Telefon *
+            <div class="phrow">
+              <select id="oCc" aria-label="Țara / prefixul"></select>
+              <input id="oPhone" type="tel" inputmode="tel" autocomplete="tel-national" required maxlength="20" aria-describedby="oPhHint">
+            </div>
+            <small class="phh" id="oPhHint"></small>
+          </div>
+          <label class="f">Nume<input id="oName" type="text" autocomplete="name" placeholder="cum să ne adresăm" maxlength="60"></label>
+          <div class="f">Cum preferi să te contactăm?
+            <div class="seg" role="radiogroup" aria-label="Contact preferat">
+              <label><input type="radio" name="oVia" value="Viber" checked><span>Viber</span></label>
+              <label><input type="radio" name="oVia" value="WhatsApp"><span>WhatsApp</span></label>
+              <label><input type="radio" name="oVia" value="Apel"><span>Apel</span></label>
+            </div>
+          </div>
+          <button class="btn" type="submit" id="oSend">Trimite comanda</button>
+          <span class="ok" id="oOk" hidden>Mulțumim! Comanda a ajuns la noi. Te contactăm în curând pe <b id="oOkVia"></b>.</span>
+          <span class="err" id="oErr" hidden>Nu am putut trimite automat. Trimite-ne mesajul de mai jos pe WhatsApp sau Viber.</span>
+        </form>
+        <div class="sub" style="margin-top:6px">Sau scrie-ne direct</div>
+        <pre id="msg"></pre>
+        <button class="btn ghost" type="button" id="copy">Copiază mesajul</button>
+        <span class="ok" id="copied" hidden>Copiat. Lipește-l în Viber, WhatsApp sau Instagram.</span>
+        <div class="links">
+          <a id="wa" href="#" target="_blank" rel="noopener">Deschide WhatsApp</a>
+          <a id="vb" href="#" target="_blank" rel="noopener">Deschide Viber</a>
+        </div>
+        <p class="note">Telefon: <b id="ph"></b></p>
+      </div>
+    </div>
+    <details class="int" id="internBox" hidden>
+      <summary>Calcul intern (pentru Hanter.md)</summary>
+      <div class="tbl" id="intern"></div>
+    </details>
+  </aside>
+</div>
